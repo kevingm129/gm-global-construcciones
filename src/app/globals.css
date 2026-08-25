@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — fuente de verdad: docs/DESIGN-TOKENS.md (Fase 2, aprobado).
+  Los 11 valores base de color y las 2 tipografías vienen de css/style.css
+  del sitio estático original y se conservan sin cambio.
+*/
+:root {
+  /* Color — semilla original */
+  --teal: #1abcad;
+  --teal-light: #29d9cb;
+  --green: #3ec99a;
+  --green-light: #6edbb8;
+  --dark: #1a2a2a;
+  --dark-mid: #1e3535;
+  --white: #ffffff;
+  --sand: #f4faf8;
+  --text: #1a2020;
+  --text-muted: #4a6060;
+  --border: #d0eae5;
+
+  /* Color — escala extendida */
+  --teal-50: #eafbfa;
+  --teal-100: #cff5f2;
+  --teal-300: #6fe0d6;
+  --teal-500: var(--teal);
+  --teal-600: #159a8e;
+  --teal-700: #107870;
+
+  --green-50: #f0fbf6;
+  --green-100: #d7f5e6;
+  --green-300: #8fe3c0;
+  --green-500: var(--green);
+  --green-600: #2fa37b;
+  --green-700: #227d5e;
+
+  --neutral-0: var(--white);
+  --neutral-50: var(--sand);
+  --neutral-100: #e4efec;
+  --neutral-300: #b8ccc7;
+  --neutral-500: var(--text-muted);
+  --neutral-700: var(--dark-mid);
+  --neutral-900: var(--dark);
+
+  /* Clasificación de hallazgos (línea de Inspección) */
+  --status-critico-bg: #fdedec;
+  --status-critico-fg: #c0392b;
+  --status-critico-border: #f5b7b1;
+
+  --status-alta-bg: #fdf2e3;
+  --status-alta-fg: #c6720a;
+  --status-alta-border: #f8d7a3;
+
+  --status-pendiente-bg: #fcf6da;
+  --status-pendiente-fg: #9a7d0a;
+  --status-pendiente-border: #f0e1a0;
+
+  --status-conforme-bg: #e4f7ed;
+  --status-conforme-fg: #1e8a54;
+  --status-conforme-border: #a9e6c4;
+
+  --shadow-color: 26, 42, 42;
+}
+
+@theme inline {
+  /* Tipografía */
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-barlow), -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+
+  /* Color de marca (utilidades bg-, text-, border-) */
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-300: var(--teal-300);
+  --color-teal-500: var(--teal-500);
+  --color-teal-600: var(--teal-600);
+  --color-teal-700: var(--teal-700);
+
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-300: var(--green-300);
+  --color-green-500: var(--green-500);
+  --color-green-600: var(--green-600);
+  --color-green-700: var(--green-700);
+
+  --color-neutral-0: var(--neutral-0);
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-900: var(--neutral-900);
+
+  --color-brand-primary: var(--teal-500);
+  --color-brand-primary-hover: var(--teal-600);
+  --color-brand-secondary: var(--green-500);
+  --color-brand-secondary-hover: var(--green-600);
+
+  --color-surface-base: var(--white);
+  --color-surface-alt: var(--sand);
+  --color-surface-dark: var(--dark);
+  --color-surface-dark-mid: var(--dark-mid);
+
+  --color-text-heading: var(--text);
+  --color-text-body: var(--text);
+  --color-text-muted: var(--neutral-500);
+  --color-text-on-dark: var(--white);
+  --color-text-on-dark-muted: var(--neutral-300);
+
+  --color-border-default: var(--border);
+  --color-border-strong: var(--neutral-300);
+
+  --color-status-critico-bg: var(--status-critico-bg);
+  --color-status-critico-fg: var(--status-critico-fg);
+  --color-status-critico-border: var(--status-critico-border);
+  --color-status-alta-bg: var(--status-alta-bg);
+  --color-status-alta-fg: var(--status-alta-fg);
+  --color-status-alta-border: var(--status-alta-border);
+  --color-status-pendiente-bg: var(--status-pendiente-bg);
+  --color-status-pendiente-fg: var(--status-pendiente-fg);
+  --color-status-pendiente-border: var(--status-pendiente-border);
+  --color-status-conforme-bg: var(--status-conforme-bg);
+  --color-status-conforme-fg: var(--status-conforme-fg);
+  --color-status-conforme-border: var(--status-conforme-border);
+
+  /* Radios */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(26, 42, 42, 0.08);
+  --shadow-md: 0 4px 20px rgba(26, 42, 42, 0.12);
+  --shadow-lg: 0 12px 32px rgba(26, 42, 42, 0.16);
+}
+
+body {
+  background: var(--surface-base, var(--white));
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+}
+
+/* Scroll-reveal — mismo nivel de sobriedad que el sitio original (una sola transición, 0.6s) */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
