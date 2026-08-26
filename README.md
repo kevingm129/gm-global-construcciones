@@ -11,6 +11,7 @@ de un rediseño en fases documentado en `docs/`:
 - `docs/ARQUITECTURA-INFORMACION.md` — Fase 1, sitemap y matriz de contenido.
 - `docs/COPY.md` / `docs/DESIGN-TOKENS.md` — Fase 2, copy y sistema de diseño.
 - `docs/PLAN-MIGRACION-DOMINIO.md` — Fase 3, plan de corte de DNS de GitHub Pages a Vercel.
+- `docs/SEO-IMPLEMENTACION.md` — Fase 4, SEO técnico, datos estructurados y analítica.
 
 ## Stack
 
@@ -46,6 +47,17 @@ Crear un archivo `.env.local` (no se versiona) con:
 RESEND_API_KEY=   # API key de Resend
 RESEND_FROM=      # remitente verificado en Resend, ej: notificaciones@gmglobalconstrucciones.co
 RESEND_TO=        # opcional — buzón de destino, por defecto info@gmglobalconstrucciones.co
+```
+
+### Analítica (opcional, Fase 4)
+
+El sitio incluye la integración lista para GA4, Meta Pixel y la verificación de Search
+Console (ver `docs/SEO-IMPLEMENTACION.md`), pero no se activa nada sin estas variables:
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=      # ej: G-XXXXXXXXXX — sin esto, GA4 no se carga
+NEXT_PUBLIC_META_PIXEL_ID=          # ID numérico de Meta Pixel — sin esto, no se carga
+NEXT_PUBLIC_GSC_VERIFICATION=       # código de la meta tag de Google Search Console
 ```
 
 ## Build de producción
