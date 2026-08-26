@@ -113,10 +113,9 @@ export default function HomePage() {
               Eficiencia, precisión y profesionalismo en Cartagena y alrededores
             </h2>
             <p className="mt-4 text-text-body">
-              Somos una empresa dedicada a la construcción y remodelación, especializada en obras de alta calidad
-              que cumplen con los estándares más rigurosos de la industria. Nos enorgullece trabajar de la mano con
-              nuestros clientes para materializar sus ideas y convertirlas en espacios funcionales y estéticamente
-              atractivos.
+              Nos basamos en principios de eficiencia, precisión y profesionalismo, posicionándonos como una opción
+              confiable en Cartagena y alrededores. Nuestros servicios están pensados específicamente para
+              potenciar su proyecto.
             </p>
             <Button href="/empresa" variant="ghost" className="mt-4">
               Conocer más sobre GM Global →

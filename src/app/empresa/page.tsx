@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { Button } from "@/components/ui/Button";
+import { company } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Empresa",
@@ -30,7 +31,7 @@ export default function EmpresaPage() {
           </p>
         </div>
 
-        <ul data-animate className="mt-10 grid gap-4 sm:grid-cols-2">
+        <ul data-animate className="mt-10 flex flex-col gap-2.5">
           {[
             "Obras de alta calidad bajo estándares rigurosos de la industria",
             "Coordinación efectiva de todas las disciplinas constructivas",
@@ -38,7 +39,7 @@ export default function EmpresaPage() {
             "La seguridad es una prioridad en cada obra que ejecutamos",
             "Entrega de espacios funcionales con acabados de alta calidad",
           ].map((item) => (
-            <li key={item} className="flex items-start gap-3 border border-border-default bg-white p-4 text-sm">
+            <li key={item} className="flex items-start gap-2.5 text-sm">
               <span
                 aria-hidden
                 className="mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center text-[10px] text-white"
@@ -57,6 +58,10 @@ export default function EmpresaPage() {
           </p>
         </div>
 
+        <p data-animate className="mt-6 border-l-[3px] border-brand-primary bg-brand-primary/[0.06] px-6 py-3.5 font-heading text-xl italic tracking-wide text-brand-primary">
+          {company.tagline}
+        </p>
+
         <p data-animate className="mt-16 text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
           Ejemplo ilustrativo — cifras y datos pendientes de confirmar con el cliente
         </p>
@@ -69,11 +74,9 @@ export default function EmpresaPage() {
             <span className="font-heading text-lg text-brand-primary">Ej: Certificación NSR-10</span>
             <p className="mt-1 text-xs text-text-muted">Certificaciones (nombre y entidad real pendientes)</p>
           </div>
-          <div className="border border-dashed border-border-strong p-6 text-center text-sm text-text-muted">
-            [AGREGAR INFORMACIÓN REAL]
-            <p className="mt-1 text-xs">
-              Fotos de equipo / oficina — no se genera una foto de ejemplo aquí, ver nota abajo
-            </p>
+          <div className="border border-dashed border-border-strong p-6 text-center">
+            <span className="font-heading text-lg text-brand-primary">[Foto pendiente]</span>
+            <p className="mt-1 text-xs text-text-muted">Fotos de equipo / oficina (no se fabrica una foto de ejemplo)</p>
           </div>
         </div>
 
