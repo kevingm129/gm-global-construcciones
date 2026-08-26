@@ -62,18 +62,21 @@ export default async function ProjectDetailPage({ params }: Props) {
           {project.summary}
         </p>
 
-        <div data-animate className="mt-10 grid gap-4 rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-alt p-6 text-sm text-text-muted sm:grid-cols-3">
+        <p data-animate className="mt-10 text-xs font-semibold uppercase tracking-wide text-text-muted">
+          Ejemplo ilustrativo — cifras de este proyecto pendientes de confirmar con el cliente
+        </p>
+        <div data-animate className="mt-3 grid gap-4 border border-dashed border-border-strong bg-surface-alt p-6 text-sm text-text-muted sm:grid-cols-3">
           <p>
             <strong className="block text-text-heading">Metros cuadrados</strong>
-            [AGREGAR INFORMACIÓN REAL]
+            Ej: 250 m²
           </p>
           <p>
             <strong className="block text-text-heading">Presupuesto</strong>
-            [AGREGAR INFORMACIÓN REAL]
+            Ej: rango de inversión a confirmar
           </p>
           <p>
             <strong className="block text-text-heading">Fotos antes/después</strong>
-            [AGREGAR INFORMACIÓN REAL]
+            [AGREGAR INFORMACIÓN REAL] — no se genera una foto de ejemplo, ver nota en README
           </p>
         </div>
 

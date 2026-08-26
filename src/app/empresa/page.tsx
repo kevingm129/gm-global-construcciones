@@ -57,18 +57,23 @@ export default function EmpresaPage() {
           </p>
         </div>
 
-        <div data-animate className="mt-16 grid gap-6 sm:grid-cols-3">
-          <div className="rounded-[var(--radius-md)] border border-dashed border-border-strong p-6 text-center text-sm text-text-muted">
-            [AGREGAR INFORMACIÓN REAL]
-            <p className="mt-1 text-xs">Años de experiencia / historia de la empresa</p>
+        <p data-animate className="mt-16 text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
+          Ejemplo ilustrativo — cifras y datos pendientes de confirmar con el cliente
+        </p>
+        <div data-animate className="mt-4 grid gap-6 sm:grid-cols-3">
+          <div className="border border-dashed border-border-strong p-6 text-center">
+            <span className="font-heading text-3xl text-brand-primary">Ej: 10+</span>
+            <p className="mt-1 text-xs text-text-muted">Años de experiencia / historia de la empresa</p>
           </div>
-          <div className="rounded-[var(--radius-md)] border border-dashed border-border-strong p-6 text-center text-sm text-text-muted">
-            [AGREGAR INFORMACIÓN REAL]
-            <p className="mt-1 text-xs">Certificaciones</p>
+          <div className="border border-dashed border-border-strong p-6 text-center">
+            <span className="font-heading text-lg text-brand-primary">Ej: Certificación NSR-10</span>
+            <p className="mt-1 text-xs text-text-muted">Certificaciones (nombre y entidad real pendientes)</p>
           </div>
-          <div className="rounded-[var(--radius-md)] border border-dashed border-border-strong p-6 text-center text-sm text-text-muted">
+          <div className="border border-dashed border-border-strong p-6 text-center text-sm text-text-muted">
             [AGREGAR INFORMACIÓN REAL]
-            <p className="mt-1 text-xs">Fotos de equipo / oficina</p>
+            <p className="mt-1 text-xs">
+              Fotos de equipo / oficina — no se genera una foto de ejemplo aquí, ver nota abajo
+            </p>
           </div>
         </div>
 

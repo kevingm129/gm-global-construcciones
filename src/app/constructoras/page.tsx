@@ -36,12 +36,19 @@ export default function ConstructorasPage() {
           ))}
         </div>
 
-        <div data-animate className="mt-10 rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — descripción del programa de alianza con constructoras.
+        <div data-animate className="mt-10 border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
+          <p className="text-xs font-semibold uppercase tracking-wide">
+            Ejemplo ilustrativo — copy final pendiente de aprobación del cliente
+          </p>
+          <p className="mt-3 text-text-body">
+            Ej: trabajamos como aliados de ejecución con constructoras que necesitan un equipo confiable para obra
+            gris, acabados o construcciones livianas, y como apoyo técnico en la inspección previa a entrega de
+            sus proyectos.
+          </p>
         </div>
 
-        <div data-animate className="mt-10 rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — reseñas de Google.
+        <div data-animate className="mt-10 border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
+          [AGREGAR INFORMACIÓN REAL] — reseñas de Google (no se generan citas de ejemplo aquí, ver nota en README).
         </div>
       </section>
 
