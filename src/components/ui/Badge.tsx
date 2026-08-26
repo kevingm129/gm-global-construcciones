@@ -10,14 +10,14 @@ const statusStyles: Record<FindingKey, string> = {
   conforme: "bg-status-conforme-bg text-status-conforme-fg border-status-conforme-border",
 };
 
-/** Badge de tag neutro — para categorías de proyecto (equivalente a .project-tag) */
+/** Badge de tag — equivalente a .project-tag (esquina recta, tinte turquesa/verde) */
 export function TagBadge({ children, tone = "neutral" }: { children: ReactNode; tone?: "neutral" | "green" }) {
   return (
     <span
-      className={`inline-flex items-center rounded-[var(--radius-pill)] border px-3 py-1 text-xs font-medium ${
+      className={`inline-block border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide ${
         tone === "green"
-          ? "bg-green-50 text-green-700 border-green-100"
-          : "bg-neutral-50 text-text-muted border-border-default"
+          ? "border-green-500/35 bg-green-500/10 text-green-700"
+          : "border-brand-primary/30 bg-brand-primary/10 text-brand-primary"
       }`}
     >
       {children}

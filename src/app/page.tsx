@@ -41,7 +41,7 @@ export default function HomePage() {
         eyebrow={`${company.address.city}, ${company.address.country}`}
         title={
           <>
-            <em className="italic text-brand-secondary">{company.tagline}</em>
+            <em className="italic text-teal-light">{company.tagline}</em>
             <br />
             construimos y remodelamos en Cartagena de Indias
           </>
@@ -122,10 +122,23 @@ export default function HomePage() {
               Conocer más sobre GM Global →
             </Button>
           </div>
-          <div data-animate className="rounded-[var(--radius-lg)] bg-surface-dark p-8 text-white">
-            <p className="text-text-on-dark-muted">
-              Cumplimiento de normativas NSR-10 y estándares de seguridad estructural colombianos. La seguridad es
-              una prioridad en cada obra que ejecutamos.
+          <div data-animate className="bg-surface-dark p-10 text-white">
+            <h3 className="font-heading text-xl text-teal-light">Quiénes somos</h3>
+            <p className="mt-4 text-[14px] font-light leading-[1.78] text-white/75">
+              Somos una empresa dedicada a la construcción y remodelación, especializada en obras de alta calidad
+              que cumplen con los estándares más rigurosos de la industria.
+            </p>
+            <div
+              className="mt-5 flex items-center gap-4 p-6"
+              style={{ backgroundImage: "var(--gradient-brand)" }}
+            >
+              <p className="text-xs font-semibold leading-[1.45] tracking-[0.3px] text-white">
+                Cumplimiento total de normativas NSR-10 y estándares de seguridad estructural colombianos. La
+                seguridad es una prioridad en cada obra que ejecutamos.
+              </p>
+            </div>
+            <p className="mt-5 border-l-[3px] border-brand-primary bg-brand-primary/[0.06] px-6 py-3.5 font-heading text-xl italic tracking-wide text-brand-primary">
+              {company.tagline}
             </p>
           </div>
         </div>

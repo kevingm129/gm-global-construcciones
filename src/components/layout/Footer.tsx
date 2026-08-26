@@ -14,37 +14,36 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto bg-surface-dark px-6 py-12 text-text-on-dark-muted md:px-10">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
-        <div>
-          <div className="flex items-center gap-3">
-            <Image src="/images/logo3.png" alt={company.shortName} width={32} height={32} className="h-8 w-8 object-contain" />
-            <span className="font-heading text-white">
-              {company.legalName}
-              <span className="block text-xs font-normal italic text-brand-secondary">{company.tagline}</span>
+    <footer className="mt-auto bg-[#080F0F] px-6 py-8 text-white/40 md:px-10">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center gap-2.5">
+          <Image src="/images/logo3.png" alt={company.shortName} width={32} height={32} className="h-8 w-8 object-contain" />
+          <span className="font-heading text-sm font-bold text-white">
+            {company.legalName}
+            <span className="block text-[10px] font-normal not-italic uppercase tracking-[2px] text-white/30">
+              {company.tagline}
             </span>
-          </div>
-          <p className="mt-4 text-sm">
-            {company.address.city}
-            <br />
-            NIT: {company.nit} · Todos los derechos reservados.
-          </p>
+          </span>
         </div>
 
-        <nav aria-label="Enlaces del pie de página" className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <nav aria-label="Enlaces del pie de página" className="flex flex-wrap justify-center gap-x-7 gap-y-2">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-white">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-xs uppercase tracking-wide text-white/40 transition-colors duration-[250ms] hover:text-brand-primary"
+            >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="text-sm">
+        <div className="text-center text-xs text-white/40 md:text-right">
           <p>
             {company.phones.map((phone, idx) => (
               <span key={phone}>
                 {idx > 0 && " · "}
-                <TrackedLink href={`tel:${phone.replace(/\s+/g, "")}`} trackAs="click_phone" className="hover:text-white">
+                <TrackedLink href={`tel:${phone.replace(/\s+/g, "")}`} trackAs="click_phone" className="hover:text-brand-primary">
                   {phone}
                 </TrackedLink>
               </span>
@@ -55,16 +54,17 @@ export function Footer() {
               trackAs="click_whatsapp"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white"
+              className="hover:text-brand-primary"
             >
               WhatsApp
             </TrackedLink>
           </p>
-          <p>{company.emails.join(" · ")}</p>
+          <p className="mt-1">{company.emails.join(" · ")}</p>
         </div>
       </div>
-      <p className="mx-auto mt-8 max-w-6xl text-xs">
-        © {new Date().getFullYear()} {company.legalName} · {company.address.city} · {company.address.country}
+      <p className="mx-auto mt-6 max-w-6xl text-center text-[11.5px] leading-relaxed text-white/30 md:text-left">
+        © {new Date().getFullYear()} {company.legalName} · NIT: {company.nit} · {company.address.city},{" "}
+        {company.address.country} · Todos los derechos reservados.
       </p>
     </footer>
   );

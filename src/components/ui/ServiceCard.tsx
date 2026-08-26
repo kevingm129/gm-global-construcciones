@@ -9,7 +9,11 @@ function categoryHrefFor(serviceSlug: string): string {
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
-    <div data-animate className="group overflow-hidden rounded-[var(--radius-lg)] border border-border-default bg-white shadow-[var(--shadow-sm)] transition-shadow duration-[250ms] hover:shadow-[var(--shadow-md)]">
+    <div
+      data-animate
+      className="group relative overflow-hidden border border-border-default bg-white transition-all duration-[250ms] hover:-translate-y-[5px] hover:border-brand-primary hover:shadow-[var(--shadow-hover)]"
+    >
+      <div className="card-corner-accent" aria-hidden />
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={service.image}

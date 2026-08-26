@@ -7,13 +7,13 @@ import { trackEvent, type ConversionEvent } from "@/lib/analytics";
 type Variant = "primary" | "outline" | "ghost";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-6 py-3 text-sm font-medium transition-colors duration-[250ms] ease-out disabled:opacity-60 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded-[var(--radius-sm)] px-8 py-3.5 text-[13px] font-bold uppercase tracking-wider transition-opacity duration-[250ms] ease-out disabled:opacity-60 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-brand-primary text-white hover:bg-brand-primary-hover",
+  primary: "text-white bg-[image:var(--gradient-brand)] hover:opacity-90",
   outline:
     "border border-brand-primary text-brand-primary bg-transparent hover:bg-brand-primary hover:text-white",
-  ghost: "text-brand-primary hover:text-brand-primary-hover px-2 py-1",
+  ghost: "text-brand-primary hover:text-brand-primary-hover px-2 py-1 normal-case tracking-normal font-medium",
 };
 
 type ButtonProps = {

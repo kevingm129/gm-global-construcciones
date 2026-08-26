@@ -60,6 +60,9 @@
   --status-conforme-border: #a9e6c4;
 
   --shadow-color: 26, 42, 42;
+
+  /* Gradiente de marca — botones, acentos, iconos (135deg, verde → turquesa) */
+  --gradient-brand: linear-gradient(135deg, var(--green), var(--teal));
 }
 
 @theme inline {
@@ -84,6 +87,7 @@
   --color-teal-500: var(--teal-500);
   --color-teal-600: var(--teal-600);
   --color-teal-700: var(--teal-700);
+  --color-teal-light: var(--teal-light);
 
   --color-green-50: var(--green-50);
   --color-green-100: var(--green-100);
@@ -91,6 +95,7 @@
   --color-green-500: var(--green-500);
   --color-green-600: var(--green-600);
   --color-green-700: var(--green-700);
+  --color-green-light: var(--green-light);
 
   --color-neutral-0: var(--neutral-0);
   --color-neutral-50: var(--neutral-50);
@@ -132,16 +137,23 @@
   --color-status-conforme-fg: var(--status-conforme-fg);
   --color-status-conforme-border: var(--status-conforme-border);
 
-  /* Radios */
-  --radius-sm: 2px;
-  --radius-md: 6px;
-  --radius-lg: 12px;
-  --radius-pill: 999px;
+  /*
+    Radios — el sitio original (css/style.css) no usa border-radius en
+    ningún componente (botones, cards, tags): todo es de esquina recta.
+    Se conservan los tokens en 0 para no tener que tocar cada className
+    `rounded-[var(--radius-*)]` uno por uno.
+  */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-pill: 0px;
 
   /* Sombras */
   --shadow-sm: 0 2px 8px rgba(26, 42, 42, 0.08);
   --shadow-md: 0 4px 20px rgba(26, 42, 42, 0.12);
   --shadow-lg: 0 12px 32px rgba(26, 42, 42, 0.16);
+  /* Sombra de hover con tinte turquesa — igual a .service-card:hover / .project-card:hover originales */
+  --shadow-hover: 0 8px 28px rgba(26, 188, 173, 0.12);
 }
 
 body {
@@ -185,4 +197,51 @@ h3 {
     transform: none;
     transition: none;
   }
+}
+
+/* Patrón decorativo del hero original (.hero-bg-pattern) */
+.hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--teal) 0,
+    var(--teal) 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* Punto pulsante del badge del hero (.hero-badge-dot) */
+@keyframes hero-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.hero-badge-dot {
+  animation: hero-pulse 2s infinite;
+}
+
+/* Triángulo decorativo de esquina en las cards de servicio (.service-corner) */
+.card-corner-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 26px 26px 0;
+  border-color: transparent var(--teal) transparent transparent;
+  opacity: 0;
+  transition: opacity var(--transition, 0.25s ease);
+}
+.group:hover .card-corner-accent {
+  opacity: 1;
 }
