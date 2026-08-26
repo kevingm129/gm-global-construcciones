@@ -3,6 +3,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { Button } from "@/components/ui/Button";
 import { InspectionDisclaimer } from "@/components/InspectionDisclaimer";
+import { CaseTemplatePreview } from "@/components/CaseTemplatePreview";
 
 export const metadata: Metadata = {
   title: "Inspección para constructoras",
@@ -57,8 +58,8 @@ export default function ConstructorasInspeccionPage() {
             </li>
           ))}
         </ul>
-        <div data-animate className="mt-6 border border-dashed border-border-strong bg-surface-alt p-4 text-center text-xs text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — casos reales de constructoras, pendientes de que el cliente los aporte.
+        <div className="mt-6">
+          <CaseTemplatePreview />
         </div>
         <div data-animate className="mt-10 text-center">
           <Button href="/cotizacion?tipo=inspeccion">Agendar inspección</Button>
