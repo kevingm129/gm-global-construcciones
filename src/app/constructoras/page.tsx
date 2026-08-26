@@ -27,7 +27,7 @@ export default function ConstructorasPage() {
             <div
               key={c.slug}
               data-animate
-              className="flex aspect-square items-center justify-center rounded-[var(--radius-lg)] border border-border-default bg-white p-6 shadow-[var(--shadow-sm)]"
+              className="flex aspect-square items-center justify-center border border-border-default bg-white p-6"
             >
               <div className="relative h-full w-full">
                 <Image src={c.logo} alt={c.name} fill sizes="200px" className="object-contain" />
@@ -48,7 +48,7 @@ export default function ConstructorasPage() {
         </div>
 
         <div data-animate className="mt-10 border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — reseñas de Google (no se generan citas de ejemplo aquí, ver nota en README).
+          [AGREGAR INFORMACIÓN REAL] — reseñas de Google.
         </div>
       </section>
 

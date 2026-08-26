@@ -73,7 +73,7 @@ export default function HomePage() {
               key={path.title}
               href={path.href}
               data-animate
-              className="group flex flex-col rounded-[var(--radius-lg)] border border-border-default bg-white p-6 shadow-[var(--shadow-sm)] transition-shadow duration-[250ms] hover:shadow-[var(--shadow-md)]"
+              className="group flex flex-col border border-border-default bg-white p-6 transition-all duration-[250ms] hover:-translate-y-[5px] hover:border-brand-primary hover:shadow-[var(--shadow-hover)]"
             >
               <h3 className="text-lg text-text-heading">{path.title}</h3>
               <p className="mt-2 flex-1 text-sm text-text-muted">{path.description}</p>

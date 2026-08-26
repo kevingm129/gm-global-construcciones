@@ -33,7 +33,7 @@ export default function ServiciosPage() {
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="grid gap-6 md:grid-cols-2">
-          <div data-animate className="rounded-[var(--radius-lg)] border border-border-default bg-white p-8 shadow-[var(--shadow-sm)]">
+          <div data-animate className="border border-border-default bg-white p-8">
             <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Línea 1</p>
             <h2 className="mt-2 text-2xl text-text-heading">Construcción y ejecución</h2>
             <p className="mt-3 text-text-muted">
@@ -44,7 +44,7 @@ export default function ServiciosPage() {
               Ver especialidades →
             </Link>
           </div>
-          <div data-animate className="rounded-[var(--radius-lg)] border border-border-default bg-white p-8 shadow-[var(--shadow-sm)]">
+          <div data-animate className="border border-border-default bg-white p-8">
             <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Línea 2</p>
             <h2 className="mt-2 text-2xl text-text-heading">Inspección, recepción y entrega de inmuebles</h2>
             <p className="mt-3 text-text-muted">

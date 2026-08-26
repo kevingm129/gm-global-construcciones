@@ -31,7 +31,7 @@ export default function InspeccionInmueblesPage() {
 
       <section className="mx-auto max-w-4xl px-6 pb-16">
         <div className="grid gap-4 sm:grid-cols-2">
-          <div data-animate className="rounded-[var(--radius-lg)] border border-border-default bg-white p-6">
+          <div data-animate className="border border-border-default bg-white p-6">
             <h3 className="text-lg text-text-heading">¿Va a recibir un inmueble?</h3>
             <p className="mt-2 text-sm text-text-muted">
               Le acompañamos en la inspección visual y técnica de su inmueble antes de la entrega.
@@ -40,7 +40,7 @@ export default function InspeccionInmueblesPage() {
               Ver información para compradores →
             </Button>
           </div>
-          <div data-animate className="rounded-[var(--radius-lg)] border border-border-default bg-white p-6">
+          <div data-animate className="border border-border-default bg-white p-6">
             <h3 className="text-lg text-text-heading">¿Es una constructora?</h3>
             <p className="mt-2 text-sm text-text-muted">
               Apoyo en revisión previa a entrega, elaboración de punch lists y reinspección.

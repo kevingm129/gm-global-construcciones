@@ -37,9 +37,8 @@ export default async function ServiceCategoryPage({ params }: Props) {
       <PageHero eyebrow="Servicios" title={category.name} />
 
       <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
-        <div data-animate className="mx-auto max-w-2xl rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          {category.intro}
-          <p className="mt-1 text-xs">Copy introductorio de categoría pendiente de contenido real del cliente.</p>
+        <div data-animate className="mx-auto max-w-2xl border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
+          {category.intro} — copy introductorio de esta categoría pendiente de contenido real del cliente.
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

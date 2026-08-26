@@ -76,7 +76,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </p>
           <p>
             <strong className="block text-text-heading">Fotos antes/después</strong>
-            [AGREGAR INFORMACIÓN REAL] — no se genera una foto de ejemplo, ver nota en README
+            [AGREGAR INFORMACIÓN REAL]
           </p>
         </div>
 
