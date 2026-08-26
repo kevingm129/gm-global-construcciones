@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { Button } from "@/components/ui/Button";
@@ -62,7 +63,7 @@ export default function EmpresaPage() {
           {company.tagline}
         </p>
 
-        <div data-animate className="mt-16 grid gap-6 sm:grid-cols-3">
+        <div data-animate className="mt-16 grid gap-6 sm:grid-cols-2">
           <div className="border border-border-default bg-white p-6 text-center">
             <span className="font-heading text-2xl text-brand-primary">Desde 2023</span>
             <p className="mt-1 text-xs text-text-muted">
@@ -81,9 +82,28 @@ export default function EmpresaPage() {
               ))}
             </ul>
           </div>
-          <div className="border border-dashed border-border-strong p-6 text-center">
-            <span className="font-heading text-lg text-brand-primary">[Foto pendiente]</span>
-            <p className="mt-1 text-xs text-text-muted">Fotos de equipo / oficina (no se fabrica una foto de ejemplo)</p>
+        </div>
+
+        <div data-animate className="mt-10">
+          <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Nuestro equipo</p>
+          <div className="mt-4 flex flex-col items-center gap-5 border border-border-default bg-white p-6 sm:flex-row sm:items-start">
+            <div className="relative aspect-[3/4] w-full max-w-[180px] shrink-0 overflow-hidden">
+              <Image
+                src="/images/equipo/kevin-garcia-moreno.jpg"
+                alt="Kevin García Moreno, representante legal de GM Global Construcciones S.A.S."
+                fill
+                sizes="180px"
+                className="object-cover"
+              />
+            </div>
+            <div className="text-center sm:text-left">
+              <h3 className="font-heading text-lg text-text-heading">Kevin García Moreno</h3>
+              <p className="mt-1 text-sm font-medium text-brand-primary">Representante legal</p>
+              <p className="mt-3 text-sm text-text-muted">
+                Fotos adicionales de equipo y oficina — [AGREGAR INFORMACIÓN REAL], pendientes de que el cliente
+                las aporte.
+              </p>
+            </div>
           </div>
         </div>
 
