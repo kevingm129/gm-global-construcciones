@@ -3,7 +3,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { Button } from "@/components/ui/Button";
 import { InspectionDisclaimer } from "@/components/InspectionDisclaimer";
-import { CaseTemplatePreview } from "@/components/CaseTemplatePreview";
 
 export const metadata: Metadata = {
   title: "Inspección para compradores",
@@ -32,19 +31,15 @@ export default function CompradoresPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-16 text-text-body">
-        <p data-animate className="text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
-          Ejemplo ilustrativo — copy genérico, pendiente de aprobación del cliente
-        </p>
-        <p data-animate className="mt-4">
-          Como comprador, quiere recibir su inmueble con la certeza de que todo está en orden — no con la sorpresa
-          de encontrar detalles pendientes después de firmar el recibido.
+        <p data-animate>
+          Ya sea un inmueble nuevo antes de entrega o una reventa, revisamos el alcance que usted defina y le
+          entregamos un informe con cada hallazgo clasificado y su evidencia fotográfica.
         </p>
         <ul data-animate className="mt-6 space-y-3">
           {[
-            "Identifique hallazgos antes de la entrega, no después",
-            "Reciba un informe claro con evidencia fotográfica de cada hallazgo",
-            "Tome la decisión de recibir con información, no con dudas",
-            "Solicite ajustes a la constructora con respaldo documentado",
+            "Coordinamos la visita según su disponibilidad y el tipo de inmueble",
+            "Clasificamos cada hallazgo por nivel de atención — ver el sistema completo abajo",
+            "Si se acuerda, verificamos en una reinspección que los ajustes quedaron resueltos",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3 border border-border-default bg-white p-4 text-sm">
               <span
@@ -58,9 +53,17 @@ export default function CompradoresPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-6">
-          <CaseTemplatePreview />
-        </div>
+        <p data-animate className="mt-6 text-sm text-text-muted">
+          Vea el detalle completo del{" "}
+          <a href="/inspeccion-inmuebles#proceso" className="font-medium text-brand-primary hover:text-brand-primary-hover">
+            proceso de 7 pasos
+          </a>{" "}
+          y del{" "}
+          <a href="/inspeccion-inmuebles#clasificacion" className="font-medium text-brand-primary hover:text-brand-primary-hover">
+            sistema de clasificación de hallazgos
+          </a>
+          . Aún no tenemos casos de compradores publicados — se incorporarán aquí cuando existan.
+        </p>
         <div data-animate className="mt-10 text-center">
           <Button href="/cotizacion?tipo=inspeccion">Agendar inspección</Button>
         </div>

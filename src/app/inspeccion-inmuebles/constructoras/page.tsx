@@ -3,7 +3,6 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { Button } from "@/components/ui/Button";
 import { InspectionDisclaimer } from "@/components/InspectionDisclaimer";
-import { CaseTemplatePreview } from "@/components/CaseTemplatePreview";
 
 export const metadata: Metadata = {
   title: "Inspección para constructoras",
@@ -32,18 +31,14 @@ export default function ConstructorasInspeccionPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-16 text-text-body">
-        <p data-animate className="text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
-          Ejemplo ilustrativo — copy genérico, pendiente de aprobación del cliente
-        </p>
-        <p data-animate className="mt-4">
-          Antes de entregar un inmueble a su cliente, un punch list ordenado evita reclamos posteriores y protege
-          la relación comercial con quien recibe.
+        <p data-animate>
+          Coordinamos con su equipo la revisión previa a entrega, elaboramos el punch list y hacemos la
+          reinspección de seguimiento — con un informe que le sirve como respaldo frente a su cliente.
         </p>
         <ul data-animate className="mt-6 space-y-3">
           {[
-            "Detecte y corrija hallazgos antes de la entrega formal",
-            "Documente el estado del inmueble con evidencia clara y trazable",
-            "Reduzca reclamos post-entrega con un proceso ordenado",
+            "Coordinamos la visita según su cronograma de entrega",
+            "Elaboramos el punch list con cada hallazgo clasificado por nivel de atención",
             "Reinspección para verificar que los ajustes priorizados quedaron resueltos",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3 border border-border-default bg-white p-4 text-sm">
@@ -58,9 +53,17 @@ export default function ConstructorasInspeccionPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-6">
-          <CaseTemplatePreview />
-        </div>
+        <p data-animate className="mt-6 text-sm text-text-muted">
+          Vea el detalle completo del{" "}
+          <a href="/inspeccion-inmuebles#proceso" className="font-medium text-brand-primary hover:text-brand-primary-hover">
+            proceso de 7 pasos
+          </a>{" "}
+          y del{" "}
+          <a href="/inspeccion-inmuebles#clasificacion" className="font-medium text-brand-primary hover:text-brand-primary-hover">
+            sistema de clasificación de hallazgos
+          </a>
+          . Aún no tenemos casos de constructoras publicados — se incorporarán aquí cuando existan.
+        </p>
         <div data-animate className="mt-10 text-center">
           <Button href="/cotizacion?tipo=inspeccion">Agendar inspección</Button>
         </div>

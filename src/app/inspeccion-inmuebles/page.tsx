@@ -52,7 +52,7 @@ export default function InspeccionInmueblesPage() {
         </div>
       </section>
 
-      <section className="bg-surface-alt px-6 py-16 md:py-24">
+      <section id="proceso" className="scroll-mt-20 bg-surface-alt px-6 py-16 md:py-24">
         <div className="mx-auto max-w-3xl">
           <h2 data-animate className="text-center text-3xl text-text-heading">
             Nuestro proceso, en 7 pasos
@@ -63,7 +63,7 @@ export default function InspeccionInmueblesPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 md:py-24">
+      <section id="clasificacion" className="scroll-mt-20 px-6 py-16 md:py-24">
         <div className="mx-auto max-w-3xl space-y-6">
           <FindingClassification />
           <ExampleFindingsPreview />
