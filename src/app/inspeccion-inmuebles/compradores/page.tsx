@@ -31,8 +31,34 @@ export default function CompradoresPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-16 text-text-body">
-        <div data-animate className="rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — mensajería y casos específicos para audiencia compradora.
+        <p data-animate className="text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
+          Ejemplo ilustrativo — copy genérico, pendiente de aprobación del cliente
+        </p>
+        <p data-animate className="mt-4">
+          Como comprador, quiere recibir su inmueble con la certeza de que todo está en orden — no con la sorpresa
+          de encontrar detalles pendientes después de firmar el recibido.
+        </p>
+        <ul data-animate className="mt-6 space-y-3">
+          {[
+            "Identifique hallazgos antes de la entrega, no después",
+            "Reciba un informe claro con evidencia fotográfica de cada hallazgo",
+            "Tome la decisión de recibir con información, no con dudas",
+            "Solicite ajustes a la constructora con respaldo documentado",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3 border border-border-default bg-white p-4 text-sm">
+              <span
+                aria-hidden
+                className="mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center text-[10px] text-white"
+                style={{ backgroundImage: "var(--gradient-brand)" }}
+              >
+                ✓
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div data-animate className="mt-6 border border-dashed border-border-strong bg-surface-alt p-4 text-center text-xs text-text-muted">
+          [AGREGAR INFORMACIÓN REAL] — casos reales de compradores, pendientes de que el cliente los aporte.
         </div>
         <div data-animate className="mt-10 text-center">
           <Button href="/cotizacion?tipo=inspeccion">Agendar inspección</Button>

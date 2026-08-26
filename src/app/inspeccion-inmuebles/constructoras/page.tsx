@@ -31,8 +31,34 @@ export default function ConstructorasInspeccionPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-16 text-text-body">
-        <div data-animate className="rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — mensajería y casos específicos para constructoras (punch lists, reinspección).
+        <p data-animate className="text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
+          Ejemplo ilustrativo — copy genérico, pendiente de aprobación del cliente
+        </p>
+        <p data-animate className="mt-4">
+          Antes de entregar un inmueble a su cliente, un punch list ordenado evita reclamos posteriores y protege
+          la relación comercial con quien recibe.
+        </p>
+        <ul data-animate className="mt-6 space-y-3">
+          {[
+            "Detecte y corrija hallazgos antes de la entrega formal",
+            "Documente el estado del inmueble con evidencia clara y trazable",
+            "Reduzca reclamos post-entrega con un proceso ordenado",
+            "Reinspección para verificar que los ajustes priorizados quedaron resueltos",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3 border border-border-default bg-white p-4 text-sm">
+              <span
+                aria-hidden
+                className="mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center text-[10px] text-white"
+                style={{ backgroundImage: "var(--gradient-brand)" }}
+              >
+                ✓
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div data-animate className="mt-6 border border-dashed border-border-strong bg-surface-alt p-4 text-center text-xs text-text-muted">
+          [AGREGAR INFORMACIÓN REAL] — casos reales de constructoras, pendientes de que el cliente los aporte.
         </div>
         <div data-animate className="mt-10 text-center">
           <Button href="/cotizacion?tipo=inspeccion">Agendar inspección</Button>
