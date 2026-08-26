@@ -34,34 +34,9 @@ const needPaths = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "GeneralContractor",
-  name: company.legalName,
-  alternateName: company.shortName,
-  description:
-    "Empresa de construcción y remodelación en Cartagena de Indias, Colombia. Ofrecemos servicios de obra gris, acabados, construcciones livianas, gestión de proyectos e inspección de inmuebles con cumplimiento de normativas NSR-10.",
-  image: "https://www.gmglobalconstrucciones.co/images/logo3.png",
-  telephone: company.phones[0],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: company.address.street,
-    addressLocality: company.address.city,
-    addressRegion: company.address.region,
-    postalCode: company.address.postalCode,
-    addressCountry: company.address.country,
-  },
-  areaServed: "Cartagena de Indias y alrededores",
-  email: company.emails[0],
-  url: "https://www.gmglobalconstrucciones.co",
-  sameAs: Object.values(company.social),
-};
-
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <HomeHero
         eyebrow={`${company.address.city}, ${company.address.country}`}
         title={
@@ -73,7 +48,7 @@ export default function HomePage() {
         }
         subtitle="De la estructura al acabado final: convertimos ideas en espacios funcionales y bien construidos, con acompañamiento en cada etapa del proyecto."
         primaryCta={
-          <Button href="/cotizacion" variant="primary">
+          <Button href="/cotizacion" variant="primary" trackEvent="click_cotizacion">
             Solicitar cotización
           </Button>
         }
@@ -192,7 +167,7 @@ export default function HomePage() {
           Contáctenos y convirtamos sus ideas en espacios funcionales y estéticamente atractivos.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Button href="/cotizacion">Solicitar cotización</Button>
+          <Button href="/cotizacion" trackEvent="click_cotizacion">Solicitar cotización</Button>
           <Button href="/contacto" variant="outline" className="border-white text-white hover:bg-white hover:text-surface-dark">
             Hablar con GM Global
           </Button>

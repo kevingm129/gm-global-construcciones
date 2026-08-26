@@ -4,7 +4,10 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { MetaPixel } from "@/components/analytics/MetaPixel";
 import { company } from "@/lib/data";
+import { businessSchema } from "@/lib/schema";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -37,12 +40,27 @@ export const metadata: Metadata = {
     locale: "es_CO",
     type: "website",
   },
+  alternates: {
+    canonical: "/",
+  },
+  ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+
   return (
     <html lang="es" className={`${playfair.variable} ${barlow.variable}`}>
       <body className="flex min-h-screen flex-col font-body text-text-body antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema()) }}
+        />
+        {gaId && <GoogleAnalytics measurementId={gaId} />}
+        {metaPixelId && <MetaPixel pixelId={metaPixelId} />}
         <ScrollReveal />
         <Navbar />
         <main className="flex-1">{children}</main>
