@@ -5,16 +5,25 @@ import { PageHero } from "@/components/ui/Hero";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { serviceCategories, services } from "@/lib/data";
+import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Servicios",
   description:
     "Construcción, remodelación e inspección de inmuebles: 11 especialidades constructivas y una línea de inspección para compradores y constructoras.",
+  alternates: { canonical: "/servicios" },
 };
 
 export default function ServiciosPage() {
   return (
     <>
+      {services.map((service) => (
+        <script
+          key={service.slug}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema(service)) }}
+        />
+      ))}
       <Breadcrumb items={[{ label: "Inicio", href: "/" }, { label: "Servicios" }]} />
       <PageHero
         eyebrow="Portafolio de servicios"

@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: category.name,
     description: `Servicios de ${category.name.toLowerCase()} en Cartagena de Indias — GM Global Construcciones S.A.S.`,
+    alternates: { canonical: `/servicios/${category.slug}` },
   };
 }
 
