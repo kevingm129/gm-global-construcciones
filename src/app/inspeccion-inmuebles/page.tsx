@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
 import { InspectionDisclaimer } from "@/components/InspectionDisclaimer";
 import { FindingClassification } from "@/components/FindingClassification";
+import { ExampleFindingsPreview } from "@/components/ExampleFindingsPreview";
 import { inspectionSteps } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -63,8 +64,9 @@ export default function InspeccionInmueblesPage() {
       </section>
 
       <section className="px-6 py-16 md:py-24">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-3xl space-y-6">
           <FindingClassification />
+          <ExampleFindingsPreview />
         </div>
       </section>
 
