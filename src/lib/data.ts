@@ -33,7 +33,6 @@ export type Service = {
   slug: string;
   name: string;
   description: string;
-  image: string;
 };
 
 export const services: Service[] = [
@@ -42,77 +41,66 @@ export const services: Service[] = [
     name: "Estructura",
     description:
       "Diseño y construcción de estructuras resistentes con concreto reforzado, acero estructural y mampostería. Cumplimiento NSR-10 para proyectos residenciales, comerciales e industriales.",
-    image: "/images/servicios/estructura.webp",
   },
   {
     slug: "plomeria",
     name: "Plomería",
     description:
       "Instalación y mantenimiento de sistemas hidráulicos, sanitarios y de agua caliente. Detección de fugas, mantenimiento preventivo e instalación de griferías y equipos sanitarios.",
-    image: "/images/servicios/plomeria.webp",
   },
   {
     slug: "mamposteria",
     name: "Mampostería",
     description:
       "Muros, paredes y estructuras con ladrillo, bloque de concreto y piedra natural. Casas, muros de carga, divisiones interiores, fachadas y cerramientos con técnicas tradicionales y modernas.",
-    image: "/images/servicios/obragr.webp",
   },
   {
     slug: "panete",
     name: "Pañete",
     description:
       "Pañetes y revoques para paredes y techos interiores y exteriores. Mortero de cemento, yeso y mezclas personalizadas. Acabados liso, rugoso, rústico y texturizado según su proyecto.",
-    image: "/images/servicios/alistado.webp",
   },
   {
     slug: "alistado-pisos",
     name: "Alistado de pisos",
     description:
       "Nivelación y preparación de superficies lisas y resistentes ideales para cerámica, porcelanato y pintura epóxica. Mejora la adherencia de revestimientos y optimiza la durabilidad del acabado final.",
-    image: "/images/servicios/alistado.webp",
   },
   {
     slug: "enchapes",
     name: "Enchapes",
     description:
       "Instalación de cerámica, gres, piedra natural, mármol y mosaicos decorativos en cocinas, baños, fachadas y pisos. Alta durabilidad, fácil mantenimiento y estética personalizada.",
-    image: "/images/servicios/enchape.webp",
   },
   {
     slug: "estucos-pintura",
     name: "Estucos y pintura",
     description:
       "Acabados finos con estucos tradicional, veneciano y acrílico. Pintura vinílica, acrílica, esmaltes e impermeabilizantes para interiores y exteriores. Preparación previa de superficies garantizada.",
-    image: "/images/servicios/pintura.webp",
   },
   {
     slug: "construcciones-livianas",
     name: "Construcciones livianas",
     description:
       "Muros, tabiques y techos en drywall, superboard y perfilería metálica. Rapidez en ejecución, reducción de costos y flexibilidad en diseño. Divisiones, ampliaciones, cielorrasos y fachadas livianas.",
-    image: "/images/servicios/cliviana.webp",
   },
   {
     slug: "gestion-proyectos",
     name: "Gestión de proyectos",
     description:
       "Gestión completa de proyectos residenciales, comerciales e institucionales. Coordinación de todas las disciplinas constructivas para garantizar calidad, cumplimiento de cronograma y satisfacción total del cliente.",
-    image: "/images/servicios/g-proyectos.webp",
   },
   {
     slug: "remodelaciones",
     name: "Remodelaciones",
     description:
       "Transformación de espacios existentes con soluciones constructivas integrales. Remodelación de cocinas, baños, fachadas y áreas comunes para mejorar funcionalidad, estética y valor de su propiedad.",
-    image: "/images/servicios/remodelaciones.webp",
   },
   {
     slug: "aseo",
     name: "Aseo grueso y fino",
     description:
       "Ejecutamos servicios de aseo grueso y fino en viviendas, oficinas y espacios comerciales. Nuestro equipo de profesionales se asegura de que cada área esté limpia y en perfectas condiciones para garantizar un entorno saludable y agradable.",
-    image: "/images/servicios/aseo.webp",
   },
 ];
 
