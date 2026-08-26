@@ -38,8 +38,12 @@ export default function EmpresaPage() {
             "La seguridad es una prioridad en cada obra que ejecutamos",
             "Entrega de espacios funcionales con acabados de alta calidad",
           ].map((item) => (
-            <li key={item} className="flex items-start gap-3 rounded-[var(--radius-md)] border border-border-default bg-white p-4 text-sm">
-              <span aria-hidden className="mt-0.5 text-brand-secondary">
+            <li key={item} className="flex items-start gap-3 border border-border-default bg-white p-4 text-sm">
+              <span
+                aria-hidden
+                className="mt-0.5 flex h-[18px] w-[18px] shrink-0 items-center justify-center text-[10px] text-white"
+                style={{ backgroundImage: "var(--gradient-brand)" }}
+              >
                 ✓
               </span>
               {item}
@@ -47,9 +51,9 @@ export default function EmpresaPage() {
           ))}
         </ul>
 
-        <div data-animate className="mt-10 rounded-[var(--radius-lg)] bg-surface-dark p-8 text-white">
-          <p className="text-text-on-dark-muted">
-            Cumplimiento de normativas NSR-10 y estándares de seguridad estructural colombianos.
+        <div data-animate className="mt-10 flex items-center gap-4 p-8" style={{ backgroundImage: "var(--gradient-brand)" }}>
+          <p className="text-xs font-semibold leading-[1.45] tracking-[0.3px] text-white">
+            Cumplimiento total de normativas NSR-10 y estándares de seguridad estructural colombianos.
           </p>
         </div>
 
