@@ -96,12 +96,12 @@ El sitio usa el marcador literal `[AGREGAR INFORMACIÓN REAL]` en los bloques do
 todavía contenido real verificado (ver el detalle completo en
 `docs/ARQUITECTURA-INFORMACION.md` §3). Resumen de lo pendiente al cierre de la Fase 3:
 
-- `/empresa`: años de experiencia/historia, certificaciones, fotos de equipo u oficina.
+- `/empresa`: fotos de equipo u oficina (años de fundación y certificaciones ya confirmados
+  por el cliente el 2026-08-25 — ver `company.founded`/`company.certifications` en
+  `src/lib/data.ts`).
 - `/servicios/[categoria]`: copy introductorio propio de cada categoría (las descripciones de
   cada uno de los 11 servicios sí son reales).
-- `/inspeccion-inmuebles/compradores` y `/constructoras`: mensajería específica por audiencia
-  (la línea de negocio y su alcance ya están confirmados, el copy detallado no).
+- `/inspeccion-inmuebles/compradores` y `/constructoras`: casos reales de compradores y
+  constructoras (la línea de negocio, su alcance y la mensajería general ya están confirmados).
 - `/proyectos/[slug]`: metros cuadrados, presupuesto y fotos antes/después por proyecto.
-- `/constructoras`: descripción del programa de alianza y reseñas de Google.
-- Certificación real de cumplimiento NSR-10, si se aporta, para reincorporar el stat
-  cuantificado del hero (hoy solo se usa la versión cualitativa).
+- `/constructoras`: descripción detallada del programa de alianza y reseñas de Google.

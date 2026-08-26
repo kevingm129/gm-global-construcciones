@@ -89,8 +89,8 @@ Leyenda: **Conservar** = texto/dato real ya existente, se reutiliza tal cual · 
 |---|---|---|
 | "Quiénes somos" / filosofía | Reescribir | Base real existe en `#nosotros` de `index.html`, se expande como página propia |
 | Fotos de equipo/oficina | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | Confirmado en Fase 0: no hay banco identificado como fotos de equipo/oficina; `nosotros.webp` existe en `assets/images/` pero su contenido real no está confirmado — no asumir que es foto de equipo sin verificarlo visualmente con el cliente |
-| Años de experiencia / historia | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | No hay ningún dato de fecha de fundación ni años de trayectoria en el repo |
-| Certificaciones | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | Ninguna certificación documentada |
+| Años de experiencia / historia | ✅ **RESUELTO (2026-08-25)** | Confirmado por el cliente: constituida el 11 de octubre de 2023. Dato real en `company.founded` (`src/lib/data.ts`) |
+| Certificaciones | ✅ **RESUELTO (2026-08-25)** | Confirmado por el cliente: cumplimiento NSR-10 y certificación SG-SST. Dato real en `company.certifications` (`src/lib/data.ts`) |
 
 ### `/servicios`
 | Bloque | Estado | Detalle |

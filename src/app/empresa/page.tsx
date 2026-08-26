@@ -62,17 +62,24 @@ export default function EmpresaPage() {
           {company.tagline}
         </p>
 
-        <p data-animate className="mt-16 text-center text-xs font-semibold uppercase tracking-wide text-text-muted">
-          Ejemplo ilustrativo — cifras y datos pendientes de confirmar con el cliente
-        </p>
-        <div data-animate className="mt-4 grid gap-6 sm:grid-cols-3">
-          <div className="border border-dashed border-border-strong p-6 text-center">
-            <span className="font-heading text-3xl text-brand-primary">Ej: 10+</span>
-            <p className="mt-1 text-xs text-text-muted">Años de experiencia / historia de la empresa</p>
+        <div data-animate className="mt-16 grid gap-6 sm:grid-cols-3">
+          <div className="border border-border-default bg-white p-6 text-center">
+            <span className="font-heading text-2xl text-brand-primary">Desde 2023</span>
+            <p className="mt-1 text-xs text-text-muted">
+              Constituida el {new Date(company.founded).toLocaleDateString("es-CO", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              })}
+            </p>
           </div>
-          <div className="border border-dashed border-border-strong p-6 text-center">
-            <span className="font-heading text-lg text-brand-primary">Ej: Certificación NSR-10</span>
-            <p className="mt-1 text-xs text-text-muted">Certificaciones (nombre y entidad real pendientes)</p>
+          <div className="border border-border-default bg-white p-6 text-center">
+            <span className="font-heading text-base text-brand-primary">Certificaciones</span>
+            <ul className="mt-2 space-y-1 text-xs text-text-muted">
+              {company.certifications.map((cert) => (
+                <li key={cert}>{cert}</li>
+              ))}
+            </ul>
           </div>
           <div className="border border-dashed border-border-strong p-6 text-center">
             <span className="font-heading text-lg text-brand-primary">[Foto pendiente]</span>

@@ -27,6 +27,12 @@ export const company = {
     linkedin: "https://www.linkedin.com/company/gm-global-construcciones",
   },
   responseTime: "Nos comunicaremos con usted en menos de 24 horas hábiles.",
+  /** Confirmado directamente por el cliente (2026-08-25). */
+  founded: "2023-10-11",
+  certifications: [
+    "Cumplimiento normativo NSR-10 (Reglamento Colombiano de Construcción Sismo Resistente)",
+    "SG-SST — Sistema de Gestión de Seguridad y Salud en el Trabajo",
+  ],
 } as const;
 
 export type Service = {

@@ -65,27 +65,25 @@ credenciales reales.
 
 ## 2. Placeholders `[AGREGAR INFORMACIÓN REAL]` pendientes de completar por el cliente
 
-Lista verificada directamente contra el código fuente (no solo contra los docs de fases previas),
-13 apariciones literales en 6 páginas:
+Lista actualizada el 2026-08-25 tras revisión visual del cliente sobre el preview de Vercel —
+dos ítems de `/empresa` quedaron resueltos con datos reales confirmados directamente por él:
 
 | Página | Qué falta |
 |---|---|
-| `/empresa` | Años de experiencia / historia de la empresa |
-| `/empresa` | Certificaciones |
-| `/empresa` | Fotos de equipo / oficina |
+| `/empresa` | ~~Años de experiencia / historia~~ ✅ Resuelto — constituida el 11 de octubre de 2023 |
+| `/empresa` | ~~Certificaciones~~ ✅ Resuelto — NSR-10 y SG-SST confirmadas |
+| `/empresa` | Fotos de equipo / oficina — sigue pendiente, no se fabrica una foto de ejemplo |
 | `/servicios/construccion`, `/obra-civil`, `/mamposteria`, `/acabados`, `/remodelacion` | Copy introductorio propio de cada una de las 5 categorías (las descripciones de los 11 servicios individuales sí son reales y ya están) |
-| `/inspeccion-inmuebles/compradores` | Mensajería y casos específicos para audiencia compradora |
-| `/inspeccion-inmuebles/constructoras` | Mensajería y casos específicos para constructoras (punch lists, reinspección) |
-| `/proyectos/[slug]` (5 proyectos) | Metros cuadrados, presupuesto y fotos antes/después por proyecto |
-| `/constructoras` | Descripción del programa de alianza |
-| `/constructoras` | Reseñas de Google |
+| `/inspeccion-inmuebles/compradores` y `/constructoras` | Casos reales documentados (la mensajería general de audiencia ya se completó con copy genérico aprobado) |
+| `/proyectos/[slug]` (5 proyectos) | Metros cuadrados y presupuesto reales por proyecto (se agregaron valores de ejemplo marcados como ilustrativos); fotos antes/después — no se fabrican |
+| `/constructoras` | Descripción detallada del programa de alianza (se agregó un párrafo genérico de ejemplo); reseñas de Google — no se fabrican, serían citas atribuidas a empresas reales |
 
-Adicional, no bloqueante: certificación real de cumplimiento NSR-10 (si se aporta, se reincorpora
-el stat cuantificado del hero — hoy usa solo la versión cualitativa) y contenido real de preguntas
-frecuentes (única condición para agregar `FAQPage`, ver `docs/SEO-IMPLEMENTACION.md` §1.5).
+Adicional, no bloqueante: contenido real de preguntas frecuentes (única condición para agregar
+`FAQPage`, ver `docs/SEO-IMPLEMENTACION.md` §1.5).
 
-**No se publicó contenido inventado en ninguno de estos espacios** — todos muestran el marcador
-literal en producción hasta que el cliente los complete.
+**No se publicó contenido inventado en ninguno de estos espacios.** Donde se agregó copy o
+cifras de ejemplo (marcadas explícitamente "Ejemplo ilustrativo"), sigue pendiente que el
+cliente las reemplace por las reales antes de publicar — no basta con quitar la etiqueta.
 
 ---
 
