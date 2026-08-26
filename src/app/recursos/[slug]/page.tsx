@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Recursos",
+  // Placeholder sin contenido real ni slugs definidos (generateStaticParams no
+  // existe todavía) — se excluye de indexación para no crear páginas delgadas
+  // duplicadas por cada slug arbitrario que se solicite.
+  robots: { index: false, follow: false },
 };
 
 /**

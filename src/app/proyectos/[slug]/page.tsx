@@ -5,6 +5,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { TagBadge } from "@/components/ui/Badge";
 import { GalleryModal } from "@/components/ui/GalleryModal";
+import { ViewTracker } from "@/components/ViewTracker";
 import { galleryImages, projects } from "@/lib/data";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -17,7 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
-  return { title: project.name, description: project.summary };
+  return {
+    title: project.name,
+    description: project.summary,
+    alternates: { canonical: `/proyectos/${project.slug}` },
+  };
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
@@ -27,6 +32,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   return (
     <>
+      <ViewTracker event="view_project" params={{ project: project.slug }} />
       <Breadcrumb
         items={[{ label: "Inicio", href: "/" }, { label: "Proyectos", href: "/proyectos" }, { label: project.name }]}
       />
@@ -84,7 +90,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         </div>
 
         <div data-animate className="mt-16 text-center">
-          <Button href="/cotizacion">Solicitar cotización para un proyecto similar</Button>
+          <Button href="/cotizacion" trackEvent="click_cotizacion">Solicitar cotización para un proyecto similar</Button>
         </div>
       </section>
     </>

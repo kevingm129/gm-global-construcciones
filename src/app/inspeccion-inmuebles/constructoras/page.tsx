@@ -7,6 +7,7 @@ import { InspectionDisclaimer } from "@/components/InspectionDisclaimer";
 export const metadata: Metadata = {
   title: "Inspección para constructoras",
   description: "Apoyo técnico en revisión previa a entrega, punch lists y reinspección para constructoras en Cartagena de Indias.",
+  alternates: { canonical: "/inspeccion-inmuebles/constructoras" },
 };
 
 export default function ConstructorasInspeccionPage() {

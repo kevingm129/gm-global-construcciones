@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Empresa",
   description: "Quiénes somos: filosofía y forma de trabajo de GM Global Construcciones S.A.S. en Cartagena de Indias.",
+  alternates: { canonical: "/empresa" },
 };
 
 export default function EmpresaPage() {

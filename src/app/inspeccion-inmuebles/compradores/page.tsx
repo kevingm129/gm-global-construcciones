@@ -7,6 +7,7 @@ import { InspectionDisclaimer } from "@/components/InspectionDisclaimer";
 export const metadata: Metadata = {
   title: "Inspección para compradores",
   description: "Revise su inmueble antes de recibirlo, con criterio técnico y un informe claro. Inspección visual y técnica en Cartagena de Indias.",
+  alternates: { canonical: "/inspeccion-inmuebles/compradores" },
 };
 
 export default function CompradoresPage() {

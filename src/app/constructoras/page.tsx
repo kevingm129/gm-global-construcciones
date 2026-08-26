@@ -8,6 +8,7 @@ import { constructoras } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Constructoras",
   description: "Constructoras aliadas de GM Global Construcciones S.A.S. en Cartagena de Indias.",
+  alternates: { canonical: "/constructoras" },
 };
 
 export default function ConstructorasPage() {

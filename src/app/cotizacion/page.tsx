@@ -7,6 +7,7 @@ import { CotizacionTabs } from "./CotizacionTabs";
 export const metadata: Metadata = {
   title: "Solicitar cotización",
   description: "Solicite una cotización de construcción, remodelación o inspección de inmuebles con GM Global Construcciones S.A.S.",
+  alternates: { canonical: "/cotizacion" },
 };
 
 export default function CotizacionPage() {

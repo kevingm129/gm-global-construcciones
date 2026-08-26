@@ -7,6 +7,7 @@ import { projects } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Proyectos",
   description: "Proyectos de construcción y remodelación ejecutados por GM Global Construcciones S.A.S. en Cartagena de Indias.",
+  alternates: { canonical: "/proyectos" },
 };
 
 export default function ProyectosPage() {

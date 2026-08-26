@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Inspección de inmuebles",
   description:
     "Inspección visual y técnica de inmuebles antes de la entrega, con informe claro y evidencia documentada. Para compradores y constructoras en Cartagena de Indias.",
+  alternates: { canonical: "/inspeccion-inmuebles" },
 };
 
 export default function InspeccionInmueblesPage() {
