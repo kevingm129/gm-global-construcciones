@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { InputField, SelectField, TextareaField } from "@/components/ui/FormField";
 import { ConsentCheckbox } from "@/components/ui/ConsentCheckbox";
 import { services } from "@/lib/data";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -29,6 +30,7 @@ export function QuoteForm({ defaultServicio }: { defaultServicio?: string }) {
         body: formData,
       });
       if (!res.ok) throw new Error("request-failed");
+      trackEvent("submit_cotizacion");
       setStatus("success");
       e.currentTarget.reset();
     } catch {

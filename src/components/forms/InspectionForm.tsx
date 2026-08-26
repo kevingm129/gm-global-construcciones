@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { InputField, SelectField, TextareaField } from "@/components/ui/FormField";
 import { ConsentCheckbox } from "@/components/ui/ConsentCheckbox";
+import { trackEvent } from "@/lib/analytics";
 
 const inspectionTypeOptions = [
   { value: "antes-de-entrega", label: "Inmueble nuevo, antes de entrega" },
@@ -32,6 +33,7 @@ export function InspectionForm() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("request-failed");
+      trackEvent("submit_inspeccion");
       setStatus("success");
       e.currentTarget.reset();
     } catch {

@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { InputField, SelectField, TextareaField } from "@/components/ui/FormField";
 import { ConsentCheckbox } from "@/components/ui/ConsentCheckbox";
+import { trackEvent } from "@/lib/analytics";
 
 const interestOptions = [
   { value: "alianza-constructiva", label: "Alianza para ejecución de obra" },
@@ -31,6 +32,7 @@ export function ConstructorasForm() {
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error("request-failed");
+      trackEvent("submit_constructora");
       setStatus("success");
       e.currentTarget.reset();
     } catch {

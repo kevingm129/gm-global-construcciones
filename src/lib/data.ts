@@ -18,6 +18,8 @@ export const company = {
     country: "Colombia",
   },
   phones: ["+57 318 6668908", "+57 315 1569656"],
+  /** Derivado del primer teléfono real confirmado (+57 318 6668908), sin dato nuevo. */
+  whatsapp: "https://wa.me/573186668908",
   emails: ["info@gmglobalconstrucciones.co", "admin@gmglobalconstrucciones.co"],
   social: {
     facebook: "https://www.facebook.com/gmglobalconstrucciones",

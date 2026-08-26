@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { Button } from "@/components/ui/Button";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { company } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contacto",
   description: "Datos de contacto de GM Global Construcciones S.A.S. en Cartagena de Indias, Colombia.",
+  alternates: { canonical: "/contacto" },
 };
 
 export default function ContactoPage() {
@@ -29,9 +31,22 @@ export default function ContactoPage() {
             <h3 className="text-sm font-medium text-text-heading">Teléfono</h3>
             {company.phones.map((phone) => (
               <p key={phone} className="mt-2 text-sm text-text-muted">
-                {phone}
+                <TrackedLink href={`tel:${phone.replace(/\s+/g, "")}`} trackAs="click_phone" className="hover:text-brand-primary">
+                  {phone}
+                </TrackedLink>
               </p>
             ))}
+            <p className="mt-2 text-sm">
+              <TrackedLink
+                href={company.whatsapp}
+                trackAs="click_whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-brand-primary hover:text-brand-primary-hover"
+              >
+                Escribir por WhatsApp
+              </TrackedLink>
+            </p>
           </div>
           <div data-animate className="rounded-[var(--radius-lg)] border border-border-default bg-white p-6 text-center shadow-[var(--shadow-sm)]">
             <h3 className="text-sm font-medium text-text-heading">Correo electrónico</h3>
@@ -47,7 +62,7 @@ export default function ContactoPage() {
           <h2 className="text-2xl text-text-heading">Solicite su cotización</h2>
           <p className="mx-auto mt-2 max-w-md text-text-muted">{company.responseTime}</p>
           <div className="mt-6">
-            <Button href="/cotizacion">Solicitar cotización</Button>
+            <Button href="/cotizacion" trackEvent="click_cotizacion">Solicitar cotización</Button>
           </div>
         </div>
       </section>

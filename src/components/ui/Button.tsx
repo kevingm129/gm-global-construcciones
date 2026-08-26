@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode, MouseEventHandler } from "react";
+import { trackEvent, type ConversionEvent } from "@/lib/analytics";
 
 type Variant = "primary" | "outline" | "ghost";
 
@@ -25,6 +28,8 @@ type ButtonProps = {
   type?: "button" | "submit";
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
+  /** Si se define, dispara este evento de conversión al hacer clic (ver src/lib/analytics.ts). */
+  trackEvent?: ConversionEvent;
 };
 
 export function Button({
@@ -37,19 +42,34 @@ export function Button({
   type = "button",
   onClick,
   disabled,
+  trackEvent: eventName,
 }: ButtonProps) {
   const classes = `${base} ${variants[variant]} ${className}`;
 
   if (href) {
     return (
-      <Link href={href} target={target} rel={rel} className={classes}>
+      <Link
+        href={href}
+        target={target}
+        rel={rel}
+        className={classes}
+        onClick={eventName ? () => trackEvent(eventName) : undefined}
+      >
         {children}
       </Link>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+    <button
+      type={type}
+      onClick={(e) => {
+        if (eventName) trackEvent(eventName);
+        onClick?.(e);
+      }}
+      disabled={disabled}
+      className={classes}
+    >
       {children}
     </button>
   );

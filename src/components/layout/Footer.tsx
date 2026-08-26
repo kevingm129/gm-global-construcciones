@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { company } from "@/lib/data";
 
 const links = [
@@ -39,7 +40,26 @@ export function Footer() {
         </nav>
 
         <div className="text-sm">
-          <p>{company.phones.join(" · ")}</p>
+          <p>
+            {company.phones.map((phone, idx) => (
+              <span key={phone}>
+                {idx > 0 && " · "}
+                <TrackedLink href={`tel:${phone.replace(/\s+/g, "")}`} trackAs="click_phone" className="hover:text-white">
+                  {phone}
+                </TrackedLink>
+              </span>
+            ))}
+            {" · "}
+            <TrackedLink
+              href={company.whatsapp}
+              trackAs="click_whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              WhatsApp
+            </TrackedLink>
+          </p>
           <p>{company.emails.join(" · ")}</p>
         </div>
       </div>
