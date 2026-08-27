@@ -62,24 +62,6 @@ export default async function ProjectDetailPage({ params }: Props) {
           {project.summary}
         </p>
 
-        <p data-animate className="mt-10 text-xs font-semibold uppercase tracking-wide text-text-muted">
-          Ejemplo ilustrativo — cifras de este proyecto pendientes de confirmar con el cliente
-        </p>
-        <div data-animate className="mt-3 grid gap-4 border border-dashed border-border-strong bg-surface-alt p-6 text-sm text-text-muted sm:grid-cols-3">
-          <p>
-            <strong className="block text-text-heading">Metros cuadrados</strong>
-            Ej: 250 m²
-          </p>
-          <p>
-            <strong className="block text-text-heading">Presupuesto</strong>
-            Ej: rango de inversión a confirmar
-          </p>
-          <p>
-            <strong className="block text-text-heading">Fotos antes/después</strong>
-            [AGREGAR INFORMACIÓN REAL]
-          </p>
-        </div>
-
         <div data-animate className="mt-16">
           <h2 className="text-2xl text-text-heading">Galería de obras GM Global</h2>
           <p className="mt-2 max-w-2xl text-sm text-text-muted">

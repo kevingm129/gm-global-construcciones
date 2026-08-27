@@ -65,18 +65,19 @@ credenciales reales.
 
 ## 2. Placeholders `[AGREGAR INFORMACIÓN REAL]` pendientes de completar por el cliente
 
-Lista actualizada el 2026-08-25 tras revisión visual del cliente sobre el preview de Vercel —
-dos ítems de `/empresa` quedaron resueltos con datos reales confirmados directamente por él:
+Lista actualizada el 2026-08-27 tras revisión directa del cliente. Varios ítems que estaban
+pendientes ya quedaron **cerrados por decisión explícita** (no van a agregarse) en vez de
+resueltos con datos reales — se marcan distinto para no confundirlos con algo aún por hacer:
 
 | Página | Qué falta |
 |---|---|
 | `/empresa` | ~~Años de experiencia / historia~~ ✅ Resuelto — constituida el 11 de octubre de 2023 |
 | `/empresa` | ~~Certificaciones~~ ✅ Resuelto — NSR-10 y SG-SST confirmadas |
-| `/empresa` | Fotos de equipo / oficina — sigue pendiente, no se fabrica una foto de ejemplo |
+| `/empresa` | ❌ Fotos de equipo / oficina — **decidido no incluir**, ya no es un pendiente |
 | `/servicios/construccion`, `/obra-civil`, `/mamposteria`, `/acabados`, `/remodelacion` | Copy introductorio propio de cada una de las 5 categorías (las descripciones de los 11 servicios individuales sí son reales y ya están) |
-| `/inspeccion-inmuebles/compradores` y `/constructoras` | Casos reales documentados (la mensajería general de audiencia ya se completó con copy genérico aprobado) |
-| `/proyectos/[slug]` (5 proyectos) | Metros cuadrados y presupuesto reales por proyecto (se agregaron valores de ejemplo marcados como ilustrativos); fotos antes/después — no se fabrican |
-| `/constructoras` | Descripción detallada del programa de alianza (se agregó un párrafo genérico de ejemplo); reseñas de Google — no se fabrican, serían citas atribuidas a empresas reales |
+| `/inspeccion-inmuebles/compradores` y `/constructoras` | Casos reales documentados — línea de negocio nueva, sin historial todavía (confirmado por el cliente) |
+| `/proyectos/[slug]` (5 proyectos) | ❌ Metros cuadrados y presupuesto — **decidido no publicar, es información sensible**. Fotos antes/después — sigue pendiente, sin decisión tomada |
+| `/constructoras` | Enlace real al perfil de Google Business (ya existe, confirmado por el cliente — falta la URL); descripción del programa de alianza ya tiene un ejemplo ilustrativo aprobado |
 
 Adicional, no bloqueante: contenido real de preguntas frecuentes (única condición para agregar
 `FAQPage`, ver `docs/SEO-IMPLEMENTACION.md` §1.5).

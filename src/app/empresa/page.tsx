@@ -92,10 +92,6 @@ export default function EmpresaPage() {
           </div>
         </div>
 
-        <p data-animate className="mx-auto mt-6 max-w-5xl text-center text-xs text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — fotos de equipo y oficina, pendientes de que el cliente las aporte.
-        </p>
-
         <div data-animate className="mt-12 text-center">
           <Button href="/proyectos" variant="outline">
             Ver proyectos realizados

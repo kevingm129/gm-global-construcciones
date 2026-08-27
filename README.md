@@ -96,12 +96,15 @@ El sitio usa el marcador literal `[AGREGAR INFORMACIÓN REAL]` en los bloques do
 todavía contenido real verificado (ver el detalle completo en
 `docs/ARQUITECTURA-INFORMACION.md` §3). Resumen de lo pendiente al cierre de la Fase 3:
 
-- `/empresa`: fotos de equipo u oficina (años de fundación y certificaciones ya confirmados
-  por el cliente el 2026-08-25 — ver `company.founded`/`company.certifications` en
-  `src/lib/data.ts`).
 - `/servicios/[categoria]`: copy introductorio propio de cada categoría (las descripciones de
   cada uno de los 11 servicios sí son reales).
 - `/inspeccion-inmuebles/compradores` y `/constructoras`: casos reales de compradores y
   constructoras (la línea de negocio, su alcance y la mensajería general ya están confirmados).
-- `/proyectos/[slug]`: metros cuadrados, presupuesto y fotos antes/después por proyecto.
-- `/constructoras`: descripción detallada del programa de alianza y reseñas de Google.
+- `/proyectos/[slug]`: fotos antes/después por proyecto.
+- `/constructoras`: enlace real al perfil de Google Business (la empresa ya está registrada
+  ahí, falta la URL) para reemplazar las reseñas.
+
+Decisiones ya cerradas, no pendientes: el cliente confirmó (2026-08-25/27) los años de
+fundación y certificaciones reales de la empresa (`company.founded`/`company.certifications`
+en `src/lib/data.ts`), y decidió explícitamente **no publicar** fotos de equipo/oficina ni
+metros cuadrados/presupuesto por proyecto (información sensible).

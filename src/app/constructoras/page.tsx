@@ -47,9 +47,6 @@ export default function ConstructorasPage() {
           </p>
         </div>
 
-        <div data-animate className="mt-10 border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          [AGREGAR INFORMACIÓN REAL] — reseñas de Google.
-        </div>
       </section>
 
       <section className="bg-surface-alt px-6 py-16 md:py-24">

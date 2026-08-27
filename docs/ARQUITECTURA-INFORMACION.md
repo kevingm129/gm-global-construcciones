@@ -88,7 +88,7 @@ Leyenda: **Conservar** = texto/dato real ya existente, se reutiliza tal cual · 
 | Bloque | Estado | Detalle |
 |---|---|---|
 | "Quiénes somos" / filosofía | Reescribir | Base real existe en `#nosotros` de `index.html`, se expande como página propia |
-| Fotos de equipo/oficina | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | Confirmado en Fase 0: no hay banco identificado como fotos de equipo/oficina; `nosotros.webp` existe en `assets/images/` pero su contenido real no está confirmado — no asumir que es foto de equipo sin verificarlo visualmente con el cliente |
+| Fotos de equipo/oficina | ❌ **DECIDIDO — no se agrega (2026-08-27)** | El cliente decidió explícitamente no incluir fotos de equipo ni de oficina en el sitio. No es un pendiente — no se vuelve a marcar como `[AGREGAR INFORMACIÓN REAL]` |
 | Años de experiencia / historia | ✅ **RESUELTO (2026-08-25)** | Confirmado por el cliente: constituida el 11 de octubre de 2023. Dato real en `company.founded` (`src/lib/data.ts`) |
 | Certificaciones | ✅ **RESUELTO (2026-08-25)** | Confirmado por el cliente: cumplimiento NSR-10 y certificación SG-SST. Dato real en `company.certifications` (`src/lib/data.ts`) |
 
@@ -126,15 +126,16 @@ Leyenda: **Conservar** = texto/dato real ya existente, se reutiliza tal cual · 
 | Bloque | Estado | Detalle |
 |---|---|---|
 | Datos base (nombre, ubicación, duración, alcance, tags, estado) | Conservar | Ya existen para los 5 proyectos reales |
-| Narrativa extendida, metros cuadrados, presupuesto, fotos antes/después | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | Nada de esto existe hoy más allá del párrafo breve por proyecto |
+| Metros cuadrados, presupuesto | ❌ **DECIDIDO — no se publica (2026-08-27)** | El cliente confirmó que es información sensible; no se incluye en el sitio bajo ninguna circunstancia |
+| Fotos antes/después | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | Sigue pendiente, no confirmado como sensible por el cliente |
 
 ### `/constructoras`
 | Bloque | Estado | Detalle |
 |---|---|---|
 | Identidad de las 4 imágenes en `assets/images/clientes/` | **RESUELTO (2026-08-23) — parcial** | Se inspeccionaron los 4 archivos directamente: cada logo trae su nombre legible como texto en la propia imagen. `cliente1.webp` = **Invercolombia**, `cliente2.webp` = **Iglesia Cristiana Evangélica Misión Boston** (coincide con el proyecto/testimonio ya confirmado en Fase 0), `cliente3.webp` = **Project Constructions**, `cliente4.webp` = **Terracolona**. Esto es observación directa del archivo, no un dato inventado. |
 | Naturaleza de la relación con Invercolombia, Project Constructions y Terracolona | ✅ **RESUELTO (2026-08-23)** — confirmado directamente por el cliente: son relaciones comerciales reales y autorizadas para publicarse. | Los 4 logos (Invercolombia, Iglesia Cristiana Misión Boston, Project Constructions, Terracolona) quedan habilitados para `/constructoras` sin restricción adicional. |
-| Descripción del programa/relación de alianza | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | No existe ningún texto al respecto en el repo |
-| Reseñas de Google | Nuevo — `[AGREGAR INFORMACIÓN REAL]` | Confirmado como faltante por el cliente |
+| Descripción del programa/relación de alianza | Ejemplo ilustrativo agregado (2026-08-26) | Copy genérico marcado explícitamente como ejemplo, pendiente de aprobación final del cliente — ver `/constructoras` |
+| Reseñas de Google | Removido de la página (2026-08-27) | La empresa ya tiene perfil de Google Business (confirmado por el cliente), pero no se agregó enlace por no tener la URL todavía — cuando se aporte, se agrega un link real "Ver nuestras reseñas en Google", no reseñas fabricadas |
 
 ### `/contacto`
 | Bloque | Estado | Detalle |
