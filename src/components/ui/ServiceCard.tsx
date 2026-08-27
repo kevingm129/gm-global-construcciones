@@ -27,7 +27,7 @@ export function ServiceCard({ service }: { service: Service }) {
       <p className="mt-3 text-sm text-text-muted">{service.description}</p>
       <Link
         href={categoryHrefFor(service.slug)}
-        className="mt-4 inline-block text-sm font-medium text-brand-primary hover:text-brand-primary-hover"
+        className="mt-4 inline-block text-sm font-medium text-teal-700 hover:text-brand-primary-hover"
       >
         Conocer este servicio →
       </Link>

@@ -27,7 +27,7 @@ export default function EmpresaPage() {
       <section className="px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-2">
           <div data-animate>
-            <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Nuestra filosofía</p>
+            <p className="text-sm font-medium uppercase tracking-wide text-teal-700">Nuestra filosofía</p>
             <div className="mt-2 space-y-4 text-text-body">
               <p>
                 Nos basamos en principios de eficiencia, precisión y profesionalismo, posicionándonos como una
@@ -72,7 +72,7 @@ export default function EmpresaPage() {
 
         <div data-animate className="mx-auto mt-16 grid max-w-5xl gap-6 sm:grid-cols-2">
           <div className="border border-border-default bg-white p-6 text-center">
-            <span className="font-heading text-2xl text-brand-primary">Desde 2023</span>
+            <span className="font-heading text-2xl text-teal-700">Desde 2023</span>
             <p className="mt-1 text-xs text-text-muted">
               Constituida el{" "}
               {new Date(company.founded).toLocaleDateString("es-CO", {
@@ -83,7 +83,7 @@ export default function EmpresaPage() {
             </p>
           </div>
           <div className="border border-border-default bg-white p-6 text-center">
-            <span className="font-heading text-base text-brand-primary">Certificaciones</span>
+            <span className="font-heading text-base text-teal-700">Certificaciones</span>
             <ul className="mt-2 space-y-1 text-xs text-text-muted">
               {company.certifications.map((cert) => (
                 <li key={cert}>{cert}</li>

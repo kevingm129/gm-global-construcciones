@@ -26,7 +26,7 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
                 className="flex w-full items-center justify-between gap-4 py-5 text-left"
               >
                 <span className="font-heading text-lg text-text-heading">{item.title}</span>
-                <span aria-hidden className="shrink-0 text-xl text-brand-primary">
+                <span aria-hidden className="shrink-0 text-xl text-teal-700">
                   {isOpen ? "−" : "+"}
                 </span>
               </button>

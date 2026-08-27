@@ -34,23 +34,23 @@ export default function ServiciosPage() {
       <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="grid gap-6 md:grid-cols-2">
           <div data-animate className="border border-border-default bg-white p-8">
-            <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Línea 1</p>
+            <p className="text-sm font-medium uppercase tracking-wide text-teal-700">Línea 1</p>
             <h2 className="mt-2 text-2xl text-text-heading">Construcción y ejecución</h2>
             <p className="mt-3 text-text-muted">
               11 especialidades constructivas para particulares, propietarios, empresas, constructoras, contratistas
               y promotores.
             </p>
-            <Link href="#especialidades" className="mt-4 inline-block text-sm font-medium text-brand-primary">
+            <Link href="#especialidades" className="mt-4 inline-block text-sm font-medium text-teal-700">
               Ver especialidades →
             </Link>
           </div>
           <div data-animate className="border border-border-default bg-white p-8">
-            <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Línea 2</p>
+            <p className="text-sm font-medium uppercase tracking-wide text-teal-700">Línea 2</p>
             <h2 className="mt-2 text-2xl text-text-heading">Inspección, recepción y entrega de inmuebles</h2>
             <p className="mt-3 text-text-muted">
               Inspección visual y técnica según el alcance contratado, para compradores y constructoras.
             </p>
-            <Link href="/inspeccion-inmuebles" className="mt-4 inline-block text-sm font-medium text-brand-primary">
+            <Link href="/inspeccion-inmuebles" className="mt-4 inline-block text-sm font-medium text-teal-700">
               Conocer este servicio →
             </Link>
           </div>
@@ -68,7 +68,7 @@ export default function ServiciosPage() {
             <Link
               key={cat.slug}
               href={`/servicios/${cat.slug}`}
-              className="rounded-[var(--radius-pill)] border border-brand-primary px-5 py-2 text-sm font-medium text-brand-primary hover:bg-brand-primary hover:text-white"
+              className="border border-brand-primary px-5 py-2 text-sm font-medium text-teal-700 hover:bg-brand-primary hover:text-white"
             >
               {cat.name}
             </Link>

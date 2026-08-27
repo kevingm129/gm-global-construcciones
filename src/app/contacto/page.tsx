@@ -42,7 +42,7 @@ export default function ContactoPage() {
                 trackAs="click_whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-brand-primary hover:text-brand-primary-hover"
+                className="font-medium text-teal-700 hover:text-brand-primary-hover"
               >
                 Escribir por WhatsApp
               </TrackedLink>

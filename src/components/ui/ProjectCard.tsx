@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="p-6">
         <h3 className="text-xl text-text-heading">{project.name}</h3>
-        <p className="mt-1 text-xs font-semibold tracking-wide text-brand-primary">
+        <p className="mt-1 text-xs font-semibold tracking-wide text-teal-700">
           {project.location}
           {project.duration ? ` · ${project.duration}` : ""}
         </p>

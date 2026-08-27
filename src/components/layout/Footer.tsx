@@ -14,13 +14,13 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto bg-[#080F0F] px-6 py-8 text-white/40 md:px-10">
+    <footer className="mt-auto bg-[#080F0F] px-6 py-8 text-white/60 md:px-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-2.5">
           <Image src="/images/logo3.png" alt={company.shortName} width={32} height={32} className="h-8 w-8 object-contain" />
           <span className="font-heading text-sm font-bold text-white">
             {company.legalName}
-            <span className="block text-[10px] font-normal not-italic uppercase tracking-[2px] text-white/30">
+            <span className="block text-[10px] font-normal not-italic uppercase tracking-[2px] text-white/60">
               {company.tagline}
             </span>
           </span>
@@ -31,14 +31,14 @@ export function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs uppercase tracking-wide text-white/40 transition-colors duration-[250ms] hover:text-brand-primary"
+              className="text-xs uppercase tracking-wide text-white/60 transition-colors duration-[250ms] hover:text-brand-primary"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="text-center text-xs text-white/40 md:text-right">
+        <div className="text-center text-xs text-white/60 md:text-right">
           <p>
             {company.phones.map((phone, idx) => (
               <span key={phone}>
@@ -62,7 +62,7 @@ export function Footer() {
           <p className="mt-1">{company.emails.join(" · ")}</p>
         </div>
       </div>
-      <p className="mx-auto mt-6 max-w-6xl text-center text-[11.5px] leading-relaxed text-white/30 md:text-left">
+      <p className="mx-auto mt-6 max-w-6xl text-center text-[11.5px] leading-relaxed text-white/60 md:text-left">
         © {new Date().getFullYear()} {company.legalName} · NIT: {company.nit} · {company.address.city},{" "}
         {company.address.country} · Todos los derechos reservados.
       </p>

@@ -17,7 +17,7 @@ export function TagBadge({ children, tone = "neutral" }: { children: ReactNode; 
       className={`inline-block border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide ${
         tone === "green"
           ? "border-green-500/35 bg-green-500/10 text-green-700"
-          : "border-brand-primary/30 bg-brand-primary/10 text-brand-primary"
+          : "border-brand-primary/30 bg-brand-primary/10 text-teal-700"
       }`}
     >
       {children}

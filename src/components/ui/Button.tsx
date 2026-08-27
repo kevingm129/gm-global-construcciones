@@ -12,8 +12,8 @@ const base =
 const variants: Record<Variant, string> = {
   primary: "text-white bg-[image:var(--gradient-brand)] hover:opacity-90",
   outline:
-    "border border-brand-primary text-brand-primary bg-transparent hover:bg-brand-primary hover:text-white",
-  ghost: "text-brand-primary hover:text-brand-primary-hover px-2 py-1 normal-case tracking-normal font-medium",
+    "border border-brand-primary text-teal-700 bg-transparent hover:bg-brand-primary hover:text-white",
+  ghost: "text-teal-700 hover:text-brand-primary-hover px-2 py-1 normal-case tracking-normal font-medium",
 };
 
 type ButtonProps = {

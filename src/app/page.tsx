@@ -77,7 +77,7 @@ export default function HomePage() {
             >
               <h3 className="text-lg text-text-heading">{path.title}</h3>
               <p className="mt-2 flex-1 text-sm text-text-muted">{path.description}</p>
-              <span className="mt-4 text-sm font-medium text-brand-primary group-hover:text-brand-primary-hover">
+              <span className="mt-4 text-sm font-medium text-teal-700 group-hover:text-brand-primary-hover">
                 {path.cta} →
               </span>
             </Link>
@@ -108,7 +108,7 @@ export default function HomePage() {
       <section className="px-6 py-16 md:px-10 md:py-24" id="nosotros">
         <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
           <div data-animate>
-            <p className="text-sm font-medium uppercase tracking-wide text-brand-primary">Nuestra filosofía</p>
+            <p className="text-sm font-medium uppercase tracking-wide text-teal-700">Nuestra filosofía</p>
             <h2 className="mt-2 text-3xl text-text-heading">
               Eficiencia, precisión y profesionalismo en Cartagena y alrededores
             </h2>

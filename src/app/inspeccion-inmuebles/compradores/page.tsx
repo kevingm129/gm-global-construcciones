@@ -55,11 +55,11 @@ export default function CompradoresPage() {
         </ul>
         <p data-animate className="mt-6 text-sm text-text-muted">
           Vea el detalle completo del{" "}
-          <a href="/inspeccion-inmuebles#proceso" className="font-medium text-brand-primary hover:text-brand-primary-hover">
+          <a href="/inspeccion-inmuebles#proceso" className="font-medium text-teal-700 hover:text-brand-primary-hover">
             proceso de 7 pasos
           </a>{" "}
           y del{" "}
-          <a href="/inspeccion-inmuebles#clasificacion" className="font-medium text-brand-primary hover:text-brand-primary-hover">
+          <a href="/inspeccion-inmuebles#clasificacion" className="font-medium text-teal-700 hover:text-brand-primary-hover">
             sistema de clasificación de hallazgos
           </a>
           . Aún no tenemos casos de compradores publicados — se incorporarán aquí cuando existan.
