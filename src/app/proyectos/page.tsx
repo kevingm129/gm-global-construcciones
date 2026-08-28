@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { projects } from "@/lib/data";
+import { GalleryModal } from "@/components/ui/GalleryModal";
+import { galleryImages, projects } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Proyectos",
@@ -25,6 +26,18 @@ export default function ProyectosPage() {
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
+        </div>
+
+        <div data-animate className="mt-16 text-center">
+          <h2 className="text-2xl text-text-heading">Galería de obras GM Global</h2>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-text-muted">
+            Banco fotográfico general de obras ejecutadas por GM Global Construcciones. Estas fotos no están
+            necesariamente asociadas a un proyecto específico de los de arriba — quedan pendientes de
+            clasificación por proyecto cuando se confirme con el cliente.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <GalleryModal images={galleryImages} projectName="GM Global Construcciones" />
+          </div>
         </div>
       </section>
     </>

@@ -4,9 +4,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { TagBadge } from "@/components/ui/Badge";
-import { GalleryModal } from "@/components/ui/GalleryModal";
 import { ViewTracker } from "@/components/ViewTracker";
-import { galleryImages, projects } from "@/lib/data";
+import { projects } from "@/lib/data";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -61,18 +60,6 @@ export default async function ProjectDetailPage({ params }: Props) {
         <p data-animate className="mt-6 max-w-3xl text-text-body">
           {project.summary}
         </p>
-
-        <div data-animate className="mt-16">
-          <h2 className="text-2xl text-text-heading">Galería de obras GM Global</h2>
-          <p className="mt-2 max-w-2xl text-sm text-text-muted">
-            Banco fotográfico general de obras ejecutadas por GM Global Construcciones. Estas fotos no están
-            necesariamente asociadas a este proyecto específico — quedan pendientes de clasificación por proyecto
-            cuando se confirme con el cliente.
-          </p>
-          <div className="mt-6">
-            <GalleryModal images={galleryImages} projectName="GM Global Construcciones" />
-          </div>
-        </div>
 
         <div data-animate className="mt-16 text-center">
           <Button href="/cotizacion" trackEvent="click_cotizacion">Solicitar cotización para un proyecto similar</Button>
