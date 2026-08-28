@@ -29,18 +29,12 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-        {images.map((src, idx) => (
-          <button
-            key={src}
-            onClick={() => setOpenIndex(idx)}
-            className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-md)] focus:outline-none focus:ring-2 focus:ring-brand-primary"
-            aria-label={`Ver foto ${idx + 1} de ${projectName} en tamaño completo`}
-          >
-            <Image src={src} alt={`${projectName} — foto ${idx + 1}`} fill sizes="25vw" className="object-cover" />
-          </button>
-        ))}
-      </div>
+      <button
+        onClick={() => setOpenIndex(0)}
+        className="inline-flex items-center gap-2 border border-brand-primary px-6 py-3 text-sm font-medium text-teal-700 transition-colors duration-[250ms] hover:bg-brand-primary hover:text-white"
+      >
+        Ver galería de fotos ({images.length})
+      </button>
 
       {openIndex !== null && (
         <div
@@ -57,6 +51,32 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
           >
             ×
           </button>
+
+          {images.length > 1 && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpenIndex((i) => (i === null ? i : (i - 1 + images.length) % images.length));
+                }}
+                aria-label="Foto anterior"
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 text-4xl leading-none text-white sm:left-4"
+              >
+                ‹
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpenIndex((i) => (i === null ? i : (i + 1) % images.length));
+                }}
+                aria-label="Foto siguiente"
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-4xl leading-none text-white sm:right-4"
+              >
+                ›
+              </button>
+            </>
+          )}
+
           <div
             className="relative aspect-[4/3] w-full max-w-3xl shadow-[var(--shadow-lg)]"
             onClick={(e) => e.stopPropagation()}
@@ -70,6 +90,10 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
               priority
             />
           </div>
+
+          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-white/70">
+            {openIndex + 1} / {images.length}
+          </p>
         </div>
       )}
     </div>
