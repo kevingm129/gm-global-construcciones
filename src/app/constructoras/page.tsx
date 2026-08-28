@@ -22,7 +22,7 @@ export default function ConstructorasPage() {
       />
 
       <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {constructoras.map((c) => (
             <div key={c.slug} data-animate className="border border-border-default bg-white p-6">
               <div className="relative aspect-square w-full">

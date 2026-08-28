@@ -137,7 +137,7 @@ Leyenda: **Conservar** = texto/dato real ya existente, se reutiliza tal cual · 
 | Descripción del programa/relación de alianza | Ejemplo ilustrativo agregado (2026-08-26) | Copy genérico marcado explícitamente como ejemplo, pendiente de aprobación final del cliente — ver `/constructoras` |
 | Reseñas de Google | Removido de la página (2026-08-27) | La empresa ya tiene perfil de Google Business (confirmado por el cliente), pero no se agregó enlace por no tener la URL todavía — cuando se aporte, se agrega un link real "Ver nuestras reseñas en Google", no reseñas fabricadas |
 | 5º aliado: Civilco — Construcciones Civiles S.A. | ✅ **RESUELTO (2026-08-27)** | Aliado adicional a los 4 originales, confirmado directamente por el cliente. Nombre real tomado del logo aportado (`public/images/clientes/civilco.jpg`) — nótese que es **S.A.**, no S.A.S. como se mencionó inicialmente; se verificó contra el logo antes de publicar. Dirección: Calle 32 #8-33, Comercios La Matuna, Oficina 312, Cartagena, Bolívar 130001. Teléfono: +57 311 6503656 (confirmado directamente por el cliente, no por búsqueda propia). |
-| Dirección/teléfono de Invercolombia | Sigue sin confirmar | Búsqueda propia no arrojó un resultado confiable (el único hallazgo cercano era una empresa homónima en Bogotá, de otro rubro) — no se publica hasta que el cliente lo confirme directamente, mismo criterio aplicado a Civilco |
+| Invercolombia | ❌ **Retirado de la página (2026-08-27)** | El cliente decidió quitar a Invercolombia por completo de `/constructoras` — se elimina la entrada de `constructoras` en `src/lib/data.ts` y el logo (`cliente1.webp`). Quedan 4 aliados: Civilco, Iglesia Cristiana Misión Boston, Project Constructions, Terracolona. |
 
 ### `/contacto`
 | Bloque | Estado | Detalle |

@@ -278,7 +278,6 @@ export type Constructora = {
  * ver docs/ARQUITECTURA-INFORMACION.md §6 para el detalle de cada caso).
  */
 export const constructoras: Constructora[] = [
-  { slug: "invercolombia", name: "Invercolombia", logo: "/images/clientes/cliente1.webp" },
   {
     slug: "civilco",
     name: "Civilco — Construcciones Civiles S.A.",
