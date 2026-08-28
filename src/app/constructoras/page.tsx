@@ -24,14 +24,11 @@ export default function ConstructorasPage() {
       <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {constructoras.map((c) => (
-            <div
-              key={c.slug}
-              data-animate
-              className="flex aspect-square items-center justify-center border border-border-default bg-white p-6"
-            >
-              <div className="relative h-full w-full">
+            <div key={c.slug} data-animate className="border border-border-default bg-white p-6">
+              <div className="relative aspect-square w-full">
                 <Image src={c.logo} alt={c.name} fill sizes="200px" className="object-contain" />
               </div>
+              <p className="mt-3 text-center text-sm font-medium text-text-heading">{c.name}</p>
             </div>
           ))}
         </div>
