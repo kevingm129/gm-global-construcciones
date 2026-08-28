@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { PageHero } from "@/components/ui/Hero";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ConstructorasForm } from "@/components/forms/ConstructorasForm";
 import { constructoras } from "@/lib/data";
 
@@ -22,9 +23,18 @@ export default function ConstructorasPage() {
       />
 
       <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <SectionHeader
+          eyebrow="Aliados"
+          title="Empresas con las que hemos trabajado"
+          subtitle="Relaciones comerciales reales en Cartagena de Indias."
+        />
+        <div className="mx-auto mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
           {constructoras.map((c) => (
-            <div key={c.slug} data-animate className="border border-border-default bg-white p-6">
+            <div
+              key={c.slug}
+              data-animate
+              className="border border-border-default bg-white p-6 transition-all duration-[250ms] hover:-translate-y-[5px] hover:border-brand-primary hover:shadow-[var(--shadow-hover)]"
+            >
               <div className="relative aspect-square w-full">
                 <Image src={c.logo} alt={c.name} fill sizes="200px" className="object-contain" />
               </div>
@@ -38,18 +48,6 @@ export default function ConstructorasPage() {
             </div>
           ))}
         </div>
-
-        <div data-animate className="mt-10 border border-dashed border-border-strong bg-surface-alt p-6 text-center text-sm text-text-muted">
-          <p className="text-xs font-semibold uppercase tracking-wide">
-            Ejemplo ilustrativo — copy final pendiente de aprobación del cliente
-          </p>
-          <p className="mt-3 text-text-body">
-            Ej: trabajamos como aliados de ejecución con constructoras que necesitan un equipo confiable para obra
-            gris, acabados o construcciones livianas, y como apoyo técnico en la inspección previa a entrega de
-            sus proyectos.
-          </p>
-        </div>
-
       </section>
 
       <section className="bg-surface-alt px-6 py-16 md:py-24">
