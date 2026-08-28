@@ -41,13 +41,13 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
           role="dialog"
           aria-modal="true"
           aria-label={`Galería de ${projectName}`}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--dark)]/80 p-4"
+          className="fixed inset-0 z-50 flex animate-[fade-in-up_0.2s_ease-out] items-center justify-center bg-[var(--dark)]/90 p-4 backdrop-blur-sm"
           onClick={() => setOpenIndex(null)}
         >
           <button
             onClick={() => setOpenIndex(null)}
             aria-label="Cerrar galería"
-            className="absolute right-4 top-4 text-3xl leading-none text-white"
+            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center border border-white/20 bg-white/10 text-2xl leading-none text-white transition-colors duration-[250ms] hover:bg-white/20"
           >
             ×
           </button>
@@ -60,7 +60,7 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
                   setOpenIndex((i) => (i === null ? i : (i - 1 + images.length) % images.length));
                 }}
                 aria-label="Foto anterior"
-                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 text-4xl leading-none text-white sm:left-4"
+                className="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center border border-white/20 bg-white/10 text-2xl leading-none text-white transition-colors duration-[250ms] hover:bg-white/20 sm:left-6"
               >
                 ‹
               </button>
@@ -70,7 +70,7 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
                   setOpenIndex((i) => (i === null ? i : (i + 1) % images.length));
                 }}
                 aria-label="Foto siguiente"
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-4xl leading-none text-white sm:right-4"
+                className="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center border border-white/20 bg-white/10 text-2xl leading-none text-white transition-colors duration-[250ms] hover:bg-white/20 sm:right-6"
               >
                 ›
               </button>
@@ -78,22 +78,23 @@ export function GalleryModal({ images, projectName }: { images: string[]; projec
           )}
 
           <div
-            className="relative aspect-[4/3] w-full max-w-3xl shadow-[var(--shadow-lg)]"
+            className="relative flex max-h-[85vh] w-full max-w-3xl flex-col items-center gap-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={images[openIndex]}
-              alt={`${projectName} — foto ${openIndex + 1}`}
-              fill
-              sizes="100vw"
-              className="object-contain"
-              priority
-            />
+            <div className="relative aspect-[4/3] w-full border border-white/10 bg-black/20 shadow-[var(--shadow-lg)]">
+              <Image
+                src={images[openIndex]}
+                alt={`${projectName} — foto ${openIndex + 1}`}
+                fill
+                sizes="100vw"
+                className="object-contain"
+                priority
+              />
+            </div>
+            <p className="border border-white/15 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-white">
+              {openIndex + 1} / {images.length}
+            </p>
           </div>
-
-          <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-white/70">
-            {openIndex + 1} / {images.length}
-          </p>
         </div>
       )}
     </div>
