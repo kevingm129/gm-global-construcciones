@@ -289,9 +289,23 @@ export const constructoras: Constructora[] = [
     slug: "iglesia-mision-boston",
     name: "Iglesia Cristiana Evangélica Misión Boston",
     logo: "/images/clientes/cliente2.webp",
+    address: "Calle Santa Fe # 13-113, Torices, Cartagena, Bolívar",
+    phone: "+57 605 656 0598",
   },
-  { slug: "project-constructions", name: "Project Constructions", logo: "/images/clientes/cliente3.webp" },
-  { slug: "terracolona", name: "Terracolona", logo: "/images/clientes/cliente4.webp" },
+  {
+    slug: "project-constructions",
+    name: "Project Constructions",
+    logo: "/images/clientes/cliente3.webp",
+    address: "Los Corales, Edificio Alejandro Tower, Local 4, Cartagena, Bolívar",
+    phone: "+57 314 4149887",
+  },
+  {
+    slug: "terracolona",
+    name: "Terracolona",
+    logo: "/images/clientes/cliente4.webp",
+    address: "Carrera 7 # 76-35, Oficina 501, Bogotá",
+    phone: "+57 601 3211391",
+  },
 ];
 
 /**
