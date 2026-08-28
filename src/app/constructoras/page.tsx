@@ -22,13 +22,19 @@ export default function ConstructorasPage() {
       />
 
       <section className="mx-auto max-w-5xl px-6 py-16 md:py-24">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {constructoras.map((c) => (
             <div key={c.slug} data-animate className="border border-border-default bg-white p-6">
               <div className="relative aspect-square w-full">
                 <Image src={c.logo} alt={c.name} fill sizes="200px" className="object-contain" />
               </div>
               <p className="mt-3 text-center text-sm font-medium text-text-heading">{c.name}</p>
+              {(c.address || c.phone) && (
+                <div className="mt-2 space-y-0.5 text-center text-xs text-text-muted">
+                  {c.address && <p>{c.address}</p>}
+                  {c.phone && <p>{c.phone}</p>}
+                </div>
+              )}
             </div>
           ))}
         </div>

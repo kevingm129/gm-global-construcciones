@@ -266,14 +266,26 @@ export type Constructora = {
   slug: string;
   name: string;
   logo: string;
+  address?: string;
+  phone?: string;
 };
 
 /**
  * Relación comercial confirmada por el cliente el 2026-08-23
  * (docs/ARQUITECTURA-INFORMACION.md §6, ítem 3b) — autorizadas para publicarse.
+ * Dirección/teléfono solo se incluyen cuando el cliente los confirmó
+ * directamente (no se completan por búsqueda propia sin esa confirmación,
+ * ver docs/ARQUITECTURA-INFORMACION.md §6 para el detalle de cada caso).
  */
 export const constructoras: Constructora[] = [
   { slug: "invercolombia", name: "Invercolombia", logo: "/images/clientes/cliente1.webp" },
+  {
+    slug: "civilco",
+    name: "Civilco — Construcciones Civiles S.A.",
+    logo: "/images/clientes/civilco.jpg",
+    address: "Calle 32 #8-33, Comercios La Matuna, Oficina 312, Cartagena, Bolívar 130001",
+    phone: "+57 311 6503656",
+  },
   {
     slug: "iglesia-mision-boston",
     name: "Iglesia Cristiana Evangélica Misión Boston",
