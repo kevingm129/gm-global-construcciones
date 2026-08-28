@@ -75,7 +75,7 @@ export function ConstructorasForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-[var(--radius-sm)] bg-brand-primary px-6 py-3 text-sm font-medium text-white transition-colors duration-[250ms] hover:bg-brand-primary-hover disabled:opacity-60"
+        className="w-full rounded-[var(--radius-sm)] bg-[image:var(--gradient-brand)] px-6 py-3.5 text-[13px] font-bold uppercase tracking-wider text-white transition-opacity duration-[250ms] hover:opacity-90 disabled:opacity-60"
       >
         {status === "submitting" ? "Enviando..." : "Hablar con GM Global"}
       </button>
