@@ -28,7 +28,7 @@ export default function ConstructorasPage() {
           title="Empresas con las que hemos trabajado"
           subtitle="Relaciones comerciales reales en Cartagena de Indias."
         />
-        <div className="mx-auto mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="mx-auto mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
           {constructoras.map((c) => (
             <div
               key={c.slug}
@@ -39,10 +39,11 @@ export default function ConstructorasPage() {
                 <Image src={c.logo} alt={c.name} fill sizes="200px" className="object-contain" />
               </div>
               <p className="mt-3 text-center text-sm font-medium text-text-heading">{c.name}</p>
-              {(c.address || c.phone) && (
+              {(c.address || c.phone || c.nit) && (
                 <div className="mt-2 space-y-0.5 text-center text-xs text-text-muted">
                   {c.address && <p>{c.address}</p>}
                   {c.phone && <p>{c.phone}</p>}
+                  {c.nit && <p>NIT: {c.nit}</p>}
                 </div>
               )}
             </div>

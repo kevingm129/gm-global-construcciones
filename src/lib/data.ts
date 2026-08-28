@@ -268,6 +268,7 @@ export type Constructora = {
   logo: string;
   address?: string;
   phone?: string;
+  nit?: string;
 };
 
 /**
@@ -305,6 +306,14 @@ export const constructoras: Constructora[] = [
     logo: "/images/clientes/cliente4.webp",
     address: "Carrera 7 # 76-35, Oficina 501, Bogotá",
     phone: "+57 601 3211391",
+  },
+  {
+    slug: "jcp-company",
+    name: "JCP — Julio C. Paternina S.A.S.",
+    logo: "/images/clientes/jcp-company.jpg",
+    address: "Carrera 71A # 1-31-84, Cartagena, Bolívar",
+    phone: "+57 316 3092980",
+    nit: "900.178.477-9",
   },
 ];
 

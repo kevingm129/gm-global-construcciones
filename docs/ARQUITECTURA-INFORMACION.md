@@ -140,6 +140,7 @@ Leyenda: **Conservar** = texto/dato real ya existente, se reutiliza tal cual · 
 | Invercolombia | ❌ **Retirado de la página (2026-08-27)** | El cliente decidió quitar a Invercolombia por completo de `/constructoras` — se elimina la entrada de `constructoras` en `src/lib/data.ts` y el logo (`cliente1.webp`). Quedan 4 aliados: Civilco, Iglesia Cristiana Misión Boston, Project Constructions, Terracolona. |
 | Dirección/teléfono de Iglesia Misión Boston y Project Constructions | ✅ **RESUELTO (2026-08-27) — por búsqueda propia, alta confianza** | Encontrados vía búsqueda web con múltiples fuentes independientes coincidentes en cada caso. Project Constructions además corroborado por una conexión directa: aparece como constructora de "Lazuli Towers II", relacionado con el proyecto real "Lazuli Towers" ya confirmado en `data.ts`. No confirmado directamente por el cliente palabra por palabra, a diferencia de Civilco. |
 | Dirección/teléfono de Terracolona | ✅ **RESUELTO (2026-08-27)** | Encontrado por búsqueda propia (domicilio en Bogotá) y el cliente confirmó explícitamente que es la empresa correcta. |
+| 6º aliado: JCP — Julio C. Paternina S.A.S. | ✅ **RESUELTO (2026-08-27)** | Nombre real tomado del logo aportado por el cliente (`public/images/clientes/jcp-company.jpg`). Dirección, teléfono y NIT tomados de la ficha en informacolombia.com que el cliente indicó directamente como fuente (no búsqueda propia entre candidatos ambiguos). NIT: 900.178.477-9. |
 
 ### `/contacto`
 | Bloque | Estado | Detalle |
