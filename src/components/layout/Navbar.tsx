@@ -10,7 +10,7 @@ const links = [
   { href: "/servicios", label: "Servicios" },
   { href: "/inspeccion-inmuebles", label: "Inspección de inmuebles" },
   { href: "/proyectos", label: "Proyectos" },
-  { href: "/constructoras", label: "Constructoras" },
+  { href: "/constructoras", label: "Aliados" },
   { href: "/empresa", label: "Empresa" },
 ];
 
