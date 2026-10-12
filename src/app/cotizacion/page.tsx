@@ -17,6 +17,13 @@ export default function CotizacionPage() {
       <PageHero eyebrow="Hablemos de su proyecto" title="Solicitar cotización" />
 
       <section className="mx-auto max-w-2xl px-6 py-16 md:py-24">
+        <p className="mb-8 border-l-4 border-brand-primary bg-surface-alt p-4 text-sm text-text-body">
+          ¿Ya sabe qué acabados quiere?{" "}
+          <a href="/selector" className="font-semibold underline">
+            Elíjalos con imágenes de referencia
+          </a>{" "}
+          y envíenos su selección por WhatsApp.
+        </p>
         <Suspense fallback={null}>
           <CotizacionTabs />
         </Suspense>
