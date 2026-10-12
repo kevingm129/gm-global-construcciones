@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/constructoras`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/contacto`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     { url: `${SITE_URL}/cotizacion`, lastModified: now, changeFrequency: "yearly", priority: 0.9 },
+    { url: `${SITE_URL}/selector`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const categoryRoutes: MetadataRoute.Sitemap = serviceCategories.map((cat) => ({
