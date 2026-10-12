@@ -6,10 +6,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { company } from "@/lib/data";
 
-const links = [
+const links: { href: string; label: string; plain?: true }[] = [
   { href: "/servicios", label: "Servicios" },
   { href: "/inspeccion-inmuebles", label: "Inspección de inmuebles" },
   { href: "/proyectos", label: "Proyectos" },
+  { href: "/selector", label: "Elija sus acabados", plain: true },
   { href: "/constructoras", label: "Aliados" },
   { href: "/empresa", label: "Empresa" },
 ];
@@ -67,12 +68,21 @@ export function Navbar() {
         <ul className="flex flex-col gap-4 md:flex-row md:items-center md:gap-8">
           {links.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-[13px] font-medium uppercase tracking-wide text-white/75 transition-colors duration-[250ms] hover:text-brand-primary"
-              >
-                {link.label}
-              </Link>
+              {"plain" in link ? (
+                <a
+                  href={link.href}
+                  className="text-[13px] font-medium uppercase tracking-wide text-white/75 transition-colors duration-[250ms] hover:text-brand-primary"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="text-[13px] font-medium uppercase tracking-wide text-white/75 transition-colors duration-[250ms] hover:text-brand-primary"
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
